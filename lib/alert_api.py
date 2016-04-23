@@ -4,6 +4,7 @@ import time
 import usaddress
 import json
 import twilio.twiml
+import string
 
 app = Flask(__name__)
 conn = redis.Redis()
@@ -27,9 +28,10 @@ def process_food_event():
 
 	if(request.form['Body']):
 		body_info = parse_message(request.form['Body'])
-		food_alert_dict['establishment'] = body_info[0]
-		food_alert_dict['location'] = body_info[1]
+		food_alert_dict['establishment'] = body_info['establishment']
+		food_alert_dict['location'] = body_info['location']
 
+	print json.dumps(food_alert_dict)
 	conn.publish('food', json.dumps(food_alert_dict))
 
 	return str(resp)
@@ -47,8 +49,9 @@ def parse_message(text):
     	dict - dictionary with name of establishment and parsed address dictionary
 
     """
-	components = string.split(',')
-	return {establishment : components[0], location : usaddress.parse(components[1])}
+	components = string.split(text, ',')
+	print components
+	return {'establishment' : components[0], 'location' : usaddress.parse(components[1])}
 
 
 

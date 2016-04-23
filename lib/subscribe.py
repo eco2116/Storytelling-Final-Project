@@ -11,7 +11,12 @@ class Subscriber(threading.Thread):
 		self.pubsub.subscribe(channels)
 
 	def work(self, item):
-		print json.loads(item['data'])
+		print item
+		try:
+			info = json.loads(item['data'])
+			
+		except Exception as e:
+			return
     
 	def run(self):
 		for item in self.pubsub.listen():
