@@ -14,7 +14,6 @@ class Subscriber(threading.Thread):
 		print item
 		try:
 			info = json.loads(item['data'])
-			
 		except Exception as e:
 			return
     
