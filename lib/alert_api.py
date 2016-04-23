@@ -2,7 +2,7 @@ from flask import Flask, request, redirect
 import redis
 import time
 import usaddress
-
+import json
 import twilio.twiml
 
 app = Flask(__name__)
@@ -22,19 +22,16 @@ def process_food_event():
 	# 	resp.message("Sorry, we only process events within NYC!")
 	# 	return resp
 
+	food_alert_dict = {}
+	food_alert_dict['zip'] = request.form['FromZip']
+
 	if(request.form['Body']):
 		body_info = parse_message(request.form['Body'])
-		food_alert_dict = {
-			'establishment' : body_info['establishment'],
-			'location' : body_info['location'],
-			'zip' : request.form['FromZip']
-		}	
+		food_alert_dict['establishment'] = body_info[0]
+		food_alert_dict['location'] = body_info[1]
 
-	food_alert_dict = {
-		'establishment' : request.form['Body'],
-		'zip' : request.form['FromZip']
-	}
-	conn.hmset(t, food_alert_dict)
+	conn.publish('food', json.dumps(food_alert_dict))
+
 	return str(resp)
 
 
