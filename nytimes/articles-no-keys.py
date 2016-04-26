@@ -22,6 +22,7 @@ subj_dict = {}
 org_dict = {}
 geo_dict = {}
 persons_dict = {}
+sentiment_dict = {}
 
 def get_article_page(page):
 	return urllib2.urlopen(url + "&page=" + str(page)).read()
@@ -69,7 +70,6 @@ def analyze_page(page_no):
 				elif name == "persons":
 					increment_dict(persons_dict, val)
 
-	sentiment_dict = dict()
 	for v in abstract_dict.values():
 		abstract_blob = TextBlob(v)
 		sentiment_dict[v] = abstract_blob.sentiment
@@ -87,6 +87,7 @@ print sorted_geos
 print subj_dict
 print org_dict
 print persons_dict
+print sentiment_dict
 # all_comment_text = ""
 # for url in abstract_dict.keys():
 # 	# Returns most recent 25 comments
