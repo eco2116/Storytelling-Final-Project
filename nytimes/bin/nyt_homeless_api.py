@@ -23,13 +23,13 @@ def get_moving_avg():
 
 @app.route("/positive_article", methods=['GET'])
 def get_positive_article():
-	max_val = -1
+	max_val = -1.0
 	positive_article = ""
 	keys = conn.keys()
 	for key in keys:
 		try:
 			pos = conn.hget(key, 'polarity')
-			if pos > max_val:
+			if float(pos) > float(max_val):
 				max_val = pos
 				positive_article = conn.hget(key, 'title')
 
@@ -39,19 +39,19 @@ def get_positive_article():
 	return positive_article
 
 @app.route("/negative_article", methods=['GET'])
-def get_positive_article():
-	min_val = 1
+def get_negative_article():
+	min_val = 1.0
 	negative_article = ""
 	keys = conn.keys()
 	for key in keys:
-		try:
-			pos = conn.hget(key, 'polarity')
-			if pos < min_val:
-				min_val = pos
+		neg = conn.hget(key, 'polarity')
+
+		if neg:
+			print "neg" + str(neg)
+			if float(neg) < float(min_val):
+				min_val = neg
 				negative_article = conn.hget(key, 'title')
 
-		except Exception:
-			continue
 	print min_val
 	return negative_article
 
