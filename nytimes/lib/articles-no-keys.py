@@ -7,6 +7,8 @@ import time
 from textblob import TextBlob
 import operator
 import redis
+from pytagcloud import create_tag_image, make_tags
+from pytagcloud.lang.counter import get_tag_counts
 
 nyt_endpoint = "http://api.nytimes.com/svc/"
 search = "search/v2/articlesearch.json"
@@ -40,7 +42,7 @@ def increment_dict(incr_dict, key):
 def total_pages():
 	response = get_article_page(0)
 	json_response = json.loads(response)["response"]
-	print json.dumps(json_response)
+	#print json.dumps(json_response)
 	# 10 responses per page, plus partial page
 	return json_response["meta"]["hits"] / 10 + 1
 
@@ -87,6 +89,7 @@ def analyze_page(page_no):
 				elif name == "organizations":
 					conn.hincrby('organizations', val)
 				elif name == "glocations":
+					increment_dict(geo_dict, val)
 					conn.hincrby('glocations', val)
 				elif name == "persons":
 					conn.hincrby('persons', val)
@@ -95,7 +98,11 @@ def analyze_page(page_no):
 	# 	abstract_blob = TextBlob(v)
 	# 	sentiment_dict[v] = abstract_blob.sentiment
 
-
+#pip install -U pytagcloud
+#brew install homebrew/python/pygame
+def generate_word_cloud(counts):
+	tags = make_tags(counts.items(), maxsize=100)
+	create_tag_image(tags, 'cloud_large.png', size=(900, 600), fontname='Lobster')
 
 #print json.dumps(geo_dict)
 #print subj_dict
@@ -104,11 +111,8 @@ if __name__ == "__main__":
 	print pages
 	for i in range(0,5):
 		analyze_page(i)
-	
 
-
-
-
+	generate_word_cloud(geo_dict)
 
 # all_comment_text = ""
 # for url in abstract_dict.keys():

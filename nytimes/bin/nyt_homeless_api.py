@@ -59,4 +59,7 @@ if __name__ == "__main__":
     app.debug = True
     app.run()
 
+    # Using this will allow it to be accessed from the outside world
+    # app.run('0.0.0.0')
+
 
