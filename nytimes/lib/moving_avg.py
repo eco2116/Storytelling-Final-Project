@@ -12,11 +12,11 @@ while True:
     keys = conn.keys()
     for key in keys:
         try:
+            print key
             polarity = conn.hget(key, 'polarity')
             subjectivity = conn.hget(key, 'subjectivity')
-            polarity.append(float(polarity))
-            subjectivity.append(float(subjectivity))
-
+            polarities.append(float(polarity))
+            subjectivities.append(float(subjectivity))
         except Exception as e:
             #there might not yet be a delta for this time
             #or the key might be the moving avg itself
@@ -31,6 +31,8 @@ while True:
         avg_subj = sum(subjectivities)/float(len(subjectivities))
     else:
         avg_subj = 0
+
+    print avg_pol
 
     conn.set("movingAvgArticlePolarity", avg_pol)
     conn.set("movingAvgArticleSubjectivity", avg_subj)
