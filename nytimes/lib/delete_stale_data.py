@@ -2,8 +2,8 @@ import sys
 import redis
 import time
 
-#set time to live to 10 minutes for the rental events
-TTL = 600
+#set time to live to 1 day for the articles
+TTL = 86400 
 conn = redis.Redis()
 
 while True:
