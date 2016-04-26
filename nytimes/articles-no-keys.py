@@ -9,12 +9,12 @@ import operator
 nyt_endpoint = "http://api.nytimes.com/svc/"
 search = "search/v2/articlesearch.json"
 comments = "community/v3/user-content/url.json"
-search_term = "homeless"
+search_term = "homeless+new+york+city"
 api_key = ""
 community_key = ""
 
 url = nyt_endpoint + search + "?q=" + search_term + "&api-key=" + api_key + \
-	"&begin_date=20160101&end_date=20160425"
+	"&begin_date=20160401&end_date=20160425"
 
 abstract_dict = {}
 keywords_dict = {}
@@ -35,6 +35,7 @@ def increment_dict(incr_dict, key):
 def total_pages():
 	response = get_article_page(0)
 	json_response = json.loads(response)["response"]
+	print json.dumps(json_response)
 	# 10 responses per page, plus partial page
 	return json_response["meta"]["hits"] / 10 + 1
 
@@ -75,7 +76,7 @@ def analyze_page(page_no):
 
 pages = total_pages()
 print pages
-for i in range(0,2):
+for i in range(0,5):
 	analyze_page(i)
 
 #print json.dumps(geo_dict)
@@ -83,6 +84,9 @@ for i in range(0,2):
 
 sorted_geos = sorted(geo_dict.items(), key=operator.itemgetter(1))
 print sorted_geos
+print subj_dict
+print org_dict
+print persons_dict
 # all_comment_text = ""
 # for url in abstract_dict.keys():
 # 	# Returns most recent 25 comments
