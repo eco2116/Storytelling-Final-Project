@@ -3,15 +3,19 @@
 
 import urllib2
 import json
+import time
 from textblob import TextBlob
 import operator
+import redis
 
 nyt_endpoint = "http://api.nytimes.com/svc/"
 search = "search/v2/articlesearch.json"
 comments = "community/v3/user-content/url.json"
 search_term = "homeless+new+york+city"
-api_key = ""
-community_key = ""
+api_key = "a4a0aa37b8be0427990cd17ee20ea846:6:74332406"
+community_key = "5c55d179c8f553939c5d16f926fee4e0:5:74332406"
+
+conn = redis.Redis()
 
 url = nyt_endpoint + search + "?q=" + search_term + "&api-key=" + api_key + \
 	"&begin_date=20160401&end_date=20160425"
@@ -48,7 +52,24 @@ def analyze_page(page_no):
 	# print "hits: " + str(hits)
 	docs = json_response["docs"]
 
+	article_count = 0
+
 	for doc in docs:
+
+		#make sure we have hte requisite fields 
+		if doc["pub_date"] and doc['abstract'] and doc['web_url']:
+			text_blob = TextBlob(doc['abstract'])
+			sentiment = text_blob.sentiment
+
+			article_field_map = {
+				'title' : doc['web_url'],
+				'polarity' : sentiment.polarity,
+				'subjectivity' : sentiment.subjectivity,
+				'pub_date' : doc['pub_date']
+			}		
+					
+			conn.hmset(time.time(), article_field_map)
+
 		url = doc["web_url"]
 		if url:
 			abstract = doc["abstract"]
@@ -62,32 +83,33 @@ def analyze_page(page_no):
 
 				#subject, organizations, glocations, persons
 				if name == "subject":
-					increment_dict(subj_dict, val)
+					conn.hincrby('subject', val)
 				elif name == "organizations":
-					increment_dict(org_dict, val)
+					conn.hincrby('organizations', val)
 				elif name == "glocations":
-					increment_dict(geo_dict, val)
+					conn.hincrby('glocations', val)
 				elif name == "persons":
-					increment_dict(persons_dict, val)
+					conn.hincrby('persons', val)
 
-	for v in abstract_dict.values():
-		abstract_blob = TextBlob(v)
-		sentiment_dict[v] = abstract_blob.sentiment
+	# for v in abstract_dict.values():
+	# 	abstract_blob = TextBlob(v)
+	# 	sentiment_dict[v] = abstract_blob.sentiment
 
-pages = total_pages()
-print pages
-for i in range(0,5):
-	analyze_page(i)
+
 
 #print json.dumps(geo_dict)
 #print subj_dict
+if __name__ == "__main__":
+	pages = total_pages()
+	print pages
+	for i in range(0,5):
+		analyze_page(i)
+	
 
-sorted_geos = sorted(geo_dict.items(), key=operator.itemgetter(1))
-print sorted_geos
-print subj_dict
-print org_dict
-print persons_dict
-print sentiment_dict
+
+
+
+
 # all_comment_text = ""
 # for url in abstract_dict.keys():
 # 	# Returns most recent 25 comments
