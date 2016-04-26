@@ -22,7 +22,6 @@ while True:
             #or the key might be the moving avg itself
             continue
 
-
     if len(polarities):
         avg_pol = sum(polarities)/float(len(polarities))
     else:
