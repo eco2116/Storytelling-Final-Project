@@ -10,7 +10,7 @@ app = Flask(__name__)
 conn = redis.Redis()
 
 @app.route("/", methods=['GET', 'POST'])
-def process_food_event():
+def process_resource():
 	
 	t = time.time()
 	resp = twilio.twiml.Response()
