@@ -9,8 +9,8 @@ import threading
 import Queue
 
 # Find these values at https://twilio.com/user/account
-account_sid = "ACXXXXXXXXXXXXXXXXX"
-auth_token = "YYYYYYYYYYYYYYYYYY"
+account_sid = ""
+auth_token = ""
 client = TwilioRestClient(account_sid, auth_token)
 
 app = Flask(__name__)
