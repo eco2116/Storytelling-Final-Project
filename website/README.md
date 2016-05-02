@@ -18,18 +18,17 @@ the comprehensive solutions we provided, because of the following reasons:
 
 ### Running the Website Locally
 
-1. Prerequisites
-
+<ol>
+<li>Prerequisites</li>
 - Apply for the AWS RDS database credential token 
 - Apply for the Tableau Server credential token 
 - Download the folder and fill in the credential token 
 - High speed Internet access 
 - Browser (Recommend Google Chrome) 
-
-2. Running the website 
-
+<li>Running the website</li>
 - Download the and unzip the folder, double check all the six html files are in the same path 
 - Double click the files, and the website should start running 
+</ol>
 
 ## User Guidance of the Website
 
