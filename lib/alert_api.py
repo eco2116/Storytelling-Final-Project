@@ -24,6 +24,10 @@ queueDic = {
 
 #source: https://gist.github.com/jobliz/2596594
 class Subscriber(threading.Thread):
+	"""
+	A subscriber thread that sends a message to a user when a resource becomes available
+
+    """
 	def __init__(self, r, channel, phone):
 		threading.Thread.__init__(self)
 		self.redis = r
@@ -46,12 +50,16 @@ class Subscriber(threading.Thread):
 			self.work(item)
 
 class Master(threading.Thread):
+	"""
+	A thread to handle each queue of subscribers
+
+    """
 	def __init__(self, queue):
 		threading.Thread.__init__(self)
 		self.queue = queue
 	def run(self):
 		while True:
-	  		#get sub thread from queue
+	  		#get sub thread from queueg
 	  		sub = self.queue.get()
 	  		sub.start()
 	  		self.queue.task_done()
@@ -59,7 +67,10 @@ class Master(threading.Thread):
 
 @app.route("/", methods=['GET', 'POST'])
 def process_resource():
-	
+	"""
+	Handles a text message event. This can be a subscribing event or a publishing event 
+
+    """
 	t = time.time()
 	resp = twilio.twiml.Response()
 	print request.form['Body']
@@ -78,14 +89,14 @@ def process_resource():
 		resource_alert_dict['channel'] = body_info['channel']
 		if body_info['phone']:
 			resource_alert_dict['channel'] = body_info['phone']
-			
+			#put the subscriber onto the queue he or she is subscribing to
 			client = Subscriber(conn, resource_alert_dict['channel'], resource_alert_dict['phone'])
 			queueDic[resource_alert_dict['channel']].put(client)
-		
+			return str(resp)
+
 		resource_alert_dict['establishment'] = body_info['establishment']
 		resource_alert_dict['location'] = body_info['location']
 
-	print json.dumps(resource_alert_dict)
 	conn.publish(resource_alert_dict['channel'], json.dumps(resource_alert_dict))
 
 	return str(resp)
