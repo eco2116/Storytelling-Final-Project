@@ -1,3 +1,8 @@
+# decrement_topic_counts.py
+#
+# This script is used for decrementing the keywords by 1 count
+# each day so that more popular keywords of the day will remain
+# in the redis DB for a longer duration.
 
 # Import necessary dependencies
 import redis # for decrementing from database
