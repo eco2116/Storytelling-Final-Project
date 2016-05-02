@@ -73,7 +73,7 @@ shelters, and homeless people know where to find their needs and resources.
 ### Contact Page
 
 We clearly know that our strength is too small, and our resources is not wide enough. However, we have warm-hearted people from the society.
-So if people knows some external information, or people want to report something, he or she can leave us a message, we can reach out.
+So if people know some external information, or people want to report something, he or she can leave us a message, we can reach out.
 Hopefully by doing this, our platform can become more powerful and comprehensive, help to reallocation of resources, and surviving more people.
 
 ### About Us Page
@@ -85,6 +85,7 @@ We are a excellent and professional team. We are risk taker, passionate, doer an
 * Amazon AWS RDS
 * Tableau
 * JavaScript
+* HTML
 
 ## License
 
