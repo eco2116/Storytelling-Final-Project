@@ -21,21 +21,20 @@ nyt_endpoint = "http://api.nytimes.com/svc/"
 search = "search/v2/articlesearch.json"
 search_term = "homeless+new+york+city"
 
-# API key - excluded from github for privacy
-api_key = "a4a0aa37b8be0427990cd17ee20ea846:6:74332406"
+# API key - excluded from github for privacy; contact our group
+# or create a free one on NYTimes if needed for testing purposes
+api_key = ""
 
 # Redis connection
 conn = redis.Redis()
 
-today = (time.strftime("%Y%m%d"))
-
+# Get time format that NYTimes can parse for date range/sampling window of 1 day
+today = int(time.strftime("%Y%m%d"))
 yesterday = today - 1
-print today
-print yesterday
 
 # Format NYT endpoint
 url = nyt_endpoint + search + "?q=" + search_term + "&api-key=" + api_key + \
-	"&begin_date=20160401&end_date=20160425"
+	"&begin_date=" + str(yesterday) + "&end_date=" + str(today)
 
 # Initialize dictionaries to store keywords, abstracts, and sentiments
 abstract_dict = {}
