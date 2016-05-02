@@ -1,3 +1,13 @@
+# nyt_homeless_api.py
+#
+# This API can return various data about NY Times articles related
+# to the homeless population in NYC from today. One can get a list of
+# popular keywords of the day stored in redis. One can also get the
+# average subjectivity and polarity of today's articles, which is
+# analyzed using a moving average. One can also access the most positive
+# and most negative article's of the day. The sentiment analysis
+# is handled by the textblob library.
+
 # Flask application to house our API
 from flask import Flask, request, jsonify
 import redis # database storage

@@ -75,6 +75,10 @@ def analyze_page(page_no):
 	# Iterate through all documents (articles)
 	for doc in docs:
 
+		# To install textblob dependency:
+		# pip install -U textblob
+		# python -m textblob.download_corpora
+		#
 		# make sure we have the required fields 
 		if doc["pub_date"] and doc['abstract'] and doc['web_url']:
 			text_blob = TextBlob(doc['abstract'])
