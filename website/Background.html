@@ -1,0 +1,1036 @@
+<!-- This html file is used to build the background page for the homeless-story.com -->
+
+<!--First we need to specify the xml namespace for a document. In this file, the HTML validator at http://w3.org doesn't complain
+when xmlns attribute is missing in an XHTML document. This is because the namespace "xmlns=http://www.w3.org/1999/xhtml" is default, 
+and will be added to the <html> tag even if you do not include it. 
+credit to W3Schools-->
+
+<!-- The class attribute specifies one or more classnames for an element. 
+The class attribute is mostly used to point to a class in a style sheet. 
+However, it can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class.
+credit to W3Schools-->
+<html xmlns="http://www.w3.org/1999/xhtml" class=" wz-js wz-canvas wz-postmessage wz-hashchange wz-history 
+				wz-rgba wz-backgroundsize wz-borderradius wz-boxshadow wz-textshadow wz-opacity wz-cssanimations 
+				wz-cssgradients wz-csstransforms wz-csstransforms3d wz-csstransitions wz-svg wz-inlinesvg wz-pointerevents 
+				wz-layerforwarding wz-linkdownload" style="">
+				
+<!-- Following are the head elements-->
+<head>
+<!-- First we need to define the title of this document. Since this file is the background information of our website, 
+we will define this document as Background-->				
+
+  <title>Background</title>
+  
+  <!--The http-equiv attribute provides an HTTP header for the information/value of the content attribute.
+  The http-equiv attribute can be used to simulate an HTTP response header. 
+  credit to W3Schools-->
+  
+<!--We first define the content type, which specifies the character encoding for the document.-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <!--Use the following value to display the webpage in edge mode, 
+  which is the highest standards mode supported by Internet Explorer, from Internet Explorer 6 through IE11.-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!--That's a vendor-specific tag to stop an addon Skype installs in Internet Explorer from highlighting phone 
+  numbers it detects in web documents. -->
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+<!--This tag was originally used to identify mobile content in AvantGo browsers, but became a general 
+standard for identifying mobile websites. -->
+  <meta name="HandheldFriendly" content="True">
+  
+  <!--This is a Windows-proprietary meta tag that also eventually became used as another means of identifying mobile content. 
+  The drawback with this tag is that a specific width must be given. -->
+  <meta name="MobileOptimized" content="1024">
+  
+  <!--viewport is a widely supported de-facto standard - originally created by Apple for mobile Safari on iPhone, 
+  it's been adopted by almost all other mobile browsers: Opera Mobile, iPhone, Android, Iris, IE, BlackBerry, Obigo, Firefox-->
+  <meta name="viewport" content="width=1024, maximum-scale=1">
+  
+  <!--Use the name attribute to define a description, keywords, and the author of an HTML document-->
+  <meta id="meta-keywords" name="keywords" content="">
+  
+  <!--Specifies a description of the page. Search engines can pick up this description to show with the results of searches.-->
+  <meta id="meta-description" name="description" content="default description">
+  
+<!--Link to an external style sheet-->
+  <!-- <link rel="stylesheet" type="text/css" href="//storage.googleapis.com/wzcomponents/g-201604081131259880/viewer-sitebuilder/viewer.css"> -->
+  
+  <!--This attribute specifies the scripting language of the element's contents and overrides the default scripting language. 
+The scripting language is specified as a content type-->
+
+<!--In this document, we are using javascript-->
+<!-- <script type="text/javascript">
+
+// Now let's define some information about this page. First we need to give an address for this webpage. Since our project mainly focus on homeless people,
+//we define our webpage as homeless-story.com. Then do some settings for this webpage. We enable blog, and add some social network link. For example, we enable
+//facebook, google, instagram, linkedin, renren, tripadvisor, twitter, weibo, youtube and etc.. Then we need to define a page as homepage.
+//The page ID is 1403784258535 for our homepage. If the page is not available, we will show false to catch the error.
+
+var PageData = {"baseAddress":"http://homeless-story.com","ServicesBasePath":"",
+				"isTablet":false,"siteSettings":{"blogRssSettings":{"enabled":true},
+				"behanceSocialLinkId":"{\"type\":\"behance\",\"title\":\"Behance\",\"url\":\"http://www.behance.com\"}",
+				"doneFirstPublish":"true","dribbbleSocialLinkId":"{\"type\":\"dribbble\",\"title\":\"Dribbble\",\"url\":\"http://www.dribbble.com\"}",
+				"enableColumnsGrid":"false","etsySocialLinkId":"{\"type\":\"etsy\",\"title\":\"Etsy\",\"url\":\"http://www.etsy.com\"}",
+				"facebookSocialLinkId":"{\"type\":\"facebook\",\"title\":\"Facebook\",\"url\":\"https://facebook.com\"}",
+				"flickrSocialLinkId":"{\"type\":\"flickr\",\"title\":\"Flickr\",\"url\":\"http://www.flickr.com\"}",
+				"googlePlusSocialLinkId":"{\"type\":\"googlePlus\",\"title\":\"Google+\",\"url\":\"http://plus.google.com/102807070514589490248/about\"}",
+				"instagramSocialLinkId":"{\"type\":\"instagram\",\"title\":\"Instagram\",\"url\":\"http://www.instagram.com\"}",
+				"linkedinSocialLinkId":"{\"type\":\"linkedin\",\"title\":\"LinkedIn\",\"url\":\"http://www.linkedin.com\"}",
+				"picasaSocialLinkId":"{\"type\":\"picasa\",\"title\":\"Picasa\",\"url\":\"http://www.picasa.com\"}",
+				"pinterestSocialLinkId":"{\"type\":\"pinterest\",\"title\":\"Pinterest\",\"url\":\"http://www.pinterest.com\"}",
+				"redditSocialLinkId":"{\"type\":\"reddit\",\"title\":\"Reddit\",\"url\":\"http://www.reddit.com\"}",
+				"renrenSocialLinkId":"{\"type\":\"renren\",\"title\":\"Renren\",\"url\":\"http://www.renren.com\"}",
+				"showAlwaysColumnsGrid":"false",
+				"soundCloudSocialLinkId":"{\"type\":\"soundCloud\",\"title\":\"SoundCloud\",\"url\":\"http://www.soundcloud.com\"}",
+				"tripAdvisorSocialLinkId":"{\"type\":\"tripAdvisor\",\"title\":\"Trip Advisor\",\"url\":\"http://www.tripadvisor.com\"}",
+				"tumblrSocialLinkId":"{\"type\":\"tumblr\",\"title\":\"Tumblr\",\"url\":\"http://www.tumblr.com\"}",
+				"twitterSocialLinkId":"{\"type\":\"twitter\",\"title\":\"Twitter\",\"url\":\"https://twitter.com/sitebuilderhelp\"}",
+				"vimeoSocialLinkId":"{\"type\":\"vimeo\",\"title\":\"Vimeo\",\"url\":\"http://www.vimeo.com\"}","vkSocialLinkId":"{\"type\":\"vk\",\"title\":\"VK\",\"url\":\"http://www.vk.com\"}",
+				"weiboSocialLinkId":"{\"type\":\"weibo\",\"title\":\"Weibo\",\"url\":\"http://www.weibo.com\"}",
+				"youtubeSocialLinkId":"{\"type\":\"youtube\",\"title\":\"Youtube\",\"url\":\"http://www.youtube.com\"}"},
+				"defaultAjaxPageID":"1403784258535","PageNotFound":false};
+				
+//Then we can setup a facebook ID. Please not in this code, the facebook ID is not provided. In order to let this file run correctly, you need to fill in your
+//facebook ID.
+var Global = {"FacebookAppID":"************",
+			"IsMobile":false,"IsMobileView":false,"IsMobileClient":false,
+			"SiteID":42958311,"IsNewStructure":true};
+
+//Let's define some site information. In this following, the limitations, pages, ecommerce, publish, stats, storage, file, premium, mobile, newSites,
+//favicon, embedded, bannerFeature, limitation, posts, premium is being setup.
+var SiteInformation =  {"limitations":{"video":{"limitation":{"isLimited":true}},
+						"pages":{"limitation":{"isLimited":true}},
+						"ecommerce":{"limitation":{"isLimited":true}},
+						"publish":{"limitation":{"isLimited":true}},
+						"stats":{"limitation":{"isLimited":false}},
+						"storage":{"limitation":{"isLimited":false}},
+						"file":{"limitation":{"isLimited":false}},
+						"premium":{"limitation":{"isLimited":false}},
+						"mobile":{"limitation":{"isLimited":false}},
+						"newSites":{"limitation":{"isLimited":true}},
+						"favicon":{"limitation":{"isLimited":false}},
+						"embedded":{"limitation":{"isLimited":true}},
+						"bannerFeature":{"iframeUrl":null,"iframeHeight":null,
+						"limitation":{"isLimited":false}},
+						"history":{"limitation":{"isLimited":true,"upsellText":"Don't lose your work! To have unlimited access to all previous <br />versions of your site with Save History you must <a target=\"_blank\" href=\"https://secure.sitebuilder.com\">upgrade</a>"}},
+						"posts":{"limitation":{"maxPosts":7,"isLimited":true}}},
+						"isPremium":true,"groupId":42958311};
+						
+//The following code is to setup the homepage. For the storage, we choose to use Sitebuilder as a service provider. The following code is to choose
+//sitebuilder as a service address and application domain. Please note, in this following code, the Youtube Api Key is not provided. In order to run this file 
+//correctly, please apply the Youtube Api key and fill it in.						
+var Settings = {"UserStorageUrlsMap":{"1":"http://assets.sitebuilder.com/users/{0}/",
+				"2":"http://wzukusers.blob.core.windows.net/user-{0}/",
+				"6":"http://storage.googleapis.com/wzukusers/user-{0}/",
+				"61":"http://storage.googleapis.com/wzukusers/user-{0}/",
+				"64":"http://storage.googleapis.com/wzusersdev/user-{0}/"},
+				"WebzaiStorageUrlsMap":{"1":"http://assets.sitebuilder.com/assets/",
+				"2":"http://wzuk.blob.core.windows.net/assets/",
+				"6":"http://storage.googleapis.com/wzuk/assets/",
+				"61":"http://storage.googleapis.com/wzuk/assets/",
+				"64":"http://storage.googleapis.com/wzdev/assets/"},
+				"StaticContentUrl":"http://webzaidev.blob.core.windows.net/",
+				"ServiceAddress":"http://editor.sitebuilder.com/",
+				"ApplicationRoot":"//storage.googleapis.com/wzcomponents/g-201604081131259880",
+				"Brand":6,"ApplicationDomain":"sitebuilder.com",
+				"IsNewServer":true,
+				"YoutubeApiKey":"*************",
+				"AppsIframeRoot":"//preview.sitebuilder.com"};
+
+//Use Google Analytics Tracking Code (GATC) on my site.
+var _gaq = undefined;var ga = undefined;
+
+//The following code is to get the reports on the domain, helping with identification of malicious content on websites. 
+//The main focus of urlQuery is to find and detect suspicious and malicious content on webpages, 
+//to help improve the security industry and make the internet a safer place.
+</script> -->
+<!-- <script src="//storage.googleapis.com/wzcomponents/g-201604081131259880/viewer/viewer.js" 
+		type="text/javascript"></script> --><style rel="stylesheet" type="text/css"></style>
+		
+<!-- <script src="http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/571f9815101e9IwzQLC5.js?1462140631" 
+		type="text/javascript"></script> -->
+		
+<!-- <script src="http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/6B9qRGSPD1CWojLoxkU9.js?1462140631" 
+		type="text/javascript"></script> -->
+		
+<!-- <script src="http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/bGWDv1dCh7hqK1i0ONYV.js?1462140631" 
+		type="text/javascript"></script> -->
+		
+<!--Now we need to make sure every page on the website is under supervised and every page is a safe place. The following code is written under this 
+consideration. The page IDs stand for the home page, the background page, the interview page, the solution page, the contact page, the about us page.
+By doing this, we can make sure our whole website is under a safe environment-->		
+<!-- <script type="text/javascript">
+var SiteFilesMap = {"page-1403784258535":"http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/bGWDv1dCh7hqK1i0ONYV.js",
+					"page-1406139621481":"http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/593wLnNqmnM6Uiwj8bHF.js",
+					"page-1406139634508":"http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/wwabYdbVMBabjfwrYX8M.js",
+					"page-1406139701301":"http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/7dpEaIrIecRrv4nv8ezB.js",
+					"page-id1461425821211":"http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/MRjMjCHux25t5gI3aIrt.js",
+					"page-id1461463543345":"http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/inGO0dzvC1N8xXjvaurX.js",
+					"master-1343569893636":"http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/6B9qRGSPD1CWojLoxkU9.js",
+					"site-structure":"http://storage.googleapis.com/wzukusers/user-19768954/sites/42958311/571b83efd24b3WcPSDsa/571f9815101e9IwzQLC5.js"};
+					</script> -->
+					
+<!--Now let's setup every page. First we need to do some setting for every page. For example, we need to setup the title, if this page is a homepage or not
+the description and etc-->
+  <!-- <script type="text/javascript">
+    var DynamicPageContent = null;
+    var DBSiteMetaData = {
+      'pagesStructureInformation':{
+        'pagesData':{
+        //first setup the homepage. First we need to declare the page ID. 
+        //The big differences about the homepage is we need to write True for the isHomePage.
+        //And we want this webpage supports for the mobile version, so we write 
+        //True on the supportsMobileStates
+        "1403784258535":{"metaTags":"","tags":[],"id":"1403784258535",
+        			"title":"Home","pageTitle":"","description":"","keyWords":"",
+        			"index":1,"isHomePage":true,"shareStyle":true,"useNameASTitle":false,
+        			"supportsMobileStates":true,"urlAlias":"","useNameASUrl":false},
+        			
+        			//Then setup the background page. First we need to declare the page ID.
+        			//Then please note this page is not a homepage, so we need to write False for the isHomePage.
+        			//And we want this webpage supports for the mobile version, so we write 
+        			//True on the supportsMobileStates
+        			"1406139621481":{"metaTags":"","tags":[],"id":"1406139621481",
+        			"title":"About Us","pageTitle":"","description":"default description",
+        			"keyWords":"","index":6,"isHomePage":false,"shareStyle":true,
+        			"useNameASTitle":false,"supportsMobileStates":true,
+        			"urlAlias":"about-us","useNameASUrl":true},
+        			
+        			//Then setup the interview page. First we need to declare the page ID.
+        			//Then please note this page is not a homepage, so we need to write False for the isHomePage.
+        			//And we want this webpage supports for the mobile version, so we write 
+        			//True on the supportsMobileStates
+        			"1406139634508":{"metaTags":"","tags":[],
+        			"id":"1406139634508","title":"Background","pageTitle":"",
+        			"description":"default description","keyWords":"","index":2,
+        			"isHomePage":false,"shareStyle":true,"useNameASTitle":false,
+        			"supportsMobileStates":true,"urlAlias":"background","useNameASUrl":true},
+        			
+        			//Then setup the solution page. First we need to declare the page ID.
+        			//Then please note this page is not a homepage, so we need to write False for the isHomePage.
+        			//And we want this webpage supports for the mobile version, so we write 
+        			//True on the supportsMobileStates
+        			"1406139701301":{"metaTags":"","tags":[],"id":"1406139701301",
+        			"title":"Contact","pageTitle":"","description":"default description",
+        			"keyWords":"","index":5,"isHomePage":false,"shareStyle":true,
+        			"useNameASTitle":true,"supportsMobileStates":true,"urlAlias":"contact",
+        			"useNameASUrl":true,"useDefaultTitle":false},
+        			
+        			//Then setup the contact page. First we need to declare the page ID.
+        			//Then please note this page is not a homepage, so we need to write False for the isHomePage.
+        			//And we want this webpage supports for the mobile version, so we write 
+        			//True on the supportsMobileStates
+        			"id1461425821211":{"metaTags":"","tags":[],"id":"id1461425821211",
+        			"title":"Interview","pageTitle":"","description":"default description",
+        			"keyWords":"","index":3,"isHomePage":false,"urlAlias":"interview",
+        			"useNameASUrl":true,"supportsMobileStates":true,"shareStyle":true,"useDefaultTitle":false},
+        			
+        			//Then setup the about us page. First we need to declare the page ID.
+        			//Then please note this page is not a homepage, so we need to write False for the isHomePage.
+        			//And we want this webpage supports for the mobile version, so we write 
+        			//True on the supportsMobileStates
+        			"id1461463543345":{"id":"id1461463543345","title":"Solution","pageTitle":"",
+        			"description":"default description","keyWords":"","metaTags":"","index":4,
+        			"isHomePage":false,"tags":[],"urlAlias":"solution","useNameASUrl":true,
+        			"supportsMobileStates":true}},
+        
+        //set the page hierarchies, so that we can have an order and relations between pages.			
+        'pagesHierarchies':{}      },
+      'siteStructureInformation':{
+      
+      //Put the relationship between pages here. all the pages are arranged by their IDs.
+        'masterPages': {"1343569893636":{"pagesIDs":["1403784258535","1406139621481","1406139634508",
+        											"1406139701301","id1461425821211","id1461463543345"]}},
+        											
+        'listsInformation':{}      }
+    };
+
+//define a variable TemporaryImages
+    var TemporaryImages = []
+    
+//Customize the HTML viewer
+    Viewer.initialize();
+  </script> -->
+  
+  <!--Styling HTML with CSS. CSS stands for Cascading Style Sheets.
+  Styling can be added to HTML elements in 3 ways:
+	Inline - using a style attribute in HTML elements
+	Internal - using a <style> element in the HTML <head> section
+	External - using one or more external CSS files.-->
+	
+	<!--First define a font style, then calling the resources. 
+	Embedded OpenType (EOT) fonts are a compact form of OpenType fonts designed by Microsoft for use as embedded fonts on web pages. 
+	These files use the extension .eot. They are supported only by Microsoft Internet Explorer, as opposed to competing WOFF files.
+	These font files can be created from existing TrueType font files using Microsoft's Web Embedding Fonts Tool (WEFT), 
+	and other proprietary and open source software. credit to wikipedia-->
+	
+	<!--Web Open Font Format (WOFF) is an open format for using fonts on the Web. 
+	People design fonts, save or convert them to WOFF and use other technologies (like HTML, CSS, SVG) 
+	to tell browsers and other software which fonts to download and apply. Until now, downloadable fonts have not been common on the Web due 
+	to the lack of an interoperable font format. credit to W3C-->
+	
+	<!--Created at Apple Computer, TrueType was designed to fill the need for an optimized, 
+	scalable font format. The format uses hinting , a technique that preserves a font's design, even at a small scale or on a display with low resolution. 
+	It was initially developed in response to the technical limitations of Adobe's Postscript and Type 1 font formats. credit to whatis.com-->
+	
+	<!--SVG stands for Scalable Vector Graphics. SVG defines vector-based graphics in XML format. credit to W3Schools-->
+	
+  	<style rel="stylesheet" type="text/css">@font-face 
+  	{font-family: "Open Sans";src:url('http://wzuk.blob.core.windows.net/assets/fonts/ALyKWGaVsEemWmMSYxY8yg.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/ALyKWGaVsEemWmMSYxY8yg.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ALyKWGaVsEemWmMSYxY8yg.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ALyKWGaVsEemWmMSYxY8yg.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ALyKWGaVsEemWmMSYxY8yg.svg') format('svg');}
+  	@font-face {font-family: "Open Sans Semi Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/1aJZYUlSkk6puu4aOD3swQ.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/1aJZYUlSkk6puu4aOD3swQ.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/1aJZYUlSkk6puu4aOD3swQ.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/1aJZYUlSkk6puu4aOD3swQ.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/1aJZYUlSkk6puu4aOD3swQ.svg') format('svg');}
+  	@font-face {font-family: "Open Sans Extra Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/I7CsSHRfZ0GB3AlD-DX-CQ.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/I7CsSHRfZ0GB3AlD-DX-CQ.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/I7CsSHRfZ0GB3AlD-DX-CQ.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/I7CsSHRfZ0GB3AlD-DX-CQ.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/I7CsSHRfZ0GB3AlD-DX-CQ.svg') format('svg');}
+  	@font-face {font-family: "Open Sans Condensed Light";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/zrpWq297sEeRsdU269eKIw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/zrpWq297sEeRsdU269eKIw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/zrpWq297sEeRsdU269eKIw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/zrpWq297sEeRsdU269eKIw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/zrpWq297sEeRsdU269eKIw.svg') format('svg');}
+  	@font-face {font-family: "Abril Fatface";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/gDLUCJWR_kqtWwfvIU_PaA.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/gDLUCJWR_kqtWwfvIU_PaA.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/gDLUCJWR_kqtWwfvIU_PaA.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/gDLUCJWR_kqtWwfvIU_PaA.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/gDLUCJWR_kqtWwfvIU_PaA.svg') format('svg');}
+  	@font-face {font-family: "Old Standard TT";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/kQqAlUNfAUWwCMQC0RiqsA.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/kQqAlUNfAUWwCMQC0RiqsA.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/kQqAlUNfAUWwCMQC0RiqsA.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/kQqAlUNfAUWwCMQC0RiqsA.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/kQqAlUNfAUWwCMQC0RiqsA.svg') format('svg');}
+  	@font-face {font-family: "Old Standard TT Italic";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/5ef35NcXqE-Sn4NiR-kJ3w.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/5ef35NcXqE-Sn4NiR-kJ3w.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/5ef35NcXqE-Sn4NiR-kJ3w.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/5ef35NcXqE-Sn4NiR-kJ3w.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/5ef35NcXqE-Sn4NiR-kJ3w.svg') format('svg');}
+  	@font-face {font-family: "Old Standard TT Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/YWxRPXjKo0GD6sF4iTxb1A.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/YWxRPXjKo0GD6sF4iTxb1A.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/YWxRPXjKo0GD6sF4iTxb1A.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/YWxRPXjKo0GD6sF4iTxb1A.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/YWxRPXjKo0GD6sF4iTxb1A.svg') format('svg');}
+  	@font-face {font-family: "Amatic SC Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/vncilunqC0SNXw6uCxWKYw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/vncilunqC0SNXw6uCxWKYw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/vncilunqC0SNXw6uCxWKYw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/vncilunqC0SNXw6uCxWKYw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/vncilunqC0SNXw6uCxWKYw.svg') format('svg');}
+  	@font-face {font-family: "Amatic SC";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/J-Q2uiHPAUWsLt1eszDGwg.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/J-Q2uiHPAUWsLt1eszDGwg.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/J-Q2uiHPAUWsLt1eszDGwg.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/J-Q2uiHPAUWsLt1eszDGwg.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/J-Q2uiHPAUWsLt1eszDGwg.svg') format('svg');}
+  	@font-face {font-family: "Bad Script";src:url('http://wzuk.blob.core.windows.net/assets/fonts/1Bgd0dJpN0GXJNyBAzkHww.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/1Bgd0dJpN0GXJNyBAzkHww.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/1Bgd0dJpN0GXJNyBAzkHww.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/1Bgd0dJpN0GXJNyBAzkHww.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/1Bgd0dJpN0GXJNyBAzkHww.svg') format('svg');}
+  	@font-face {font-family: "Dancing Script Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/-BbHXw_ndE26qvVGfs-anQ.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/-BbHXw_ndE26qvVGfs-anQ.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/-BbHXw_ndE26qvVGfs-anQ.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/-BbHXw_ndE26qvVGfs-anQ.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/-BbHXw_ndE26qvVGfs-anQ.svg') format('svg');}
+  	@font-face {font-family: "Droid Sans Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/ne7cbOZqTkedYy1HwYydZg.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/ne7cbOZqTkedYy1HwYydZg.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ne7cbOZqTkedYy1HwYydZg.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ne7cbOZqTkedYy1HwYydZg.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ne7cbOZqTkedYy1HwYydZg.svg') format('svg');}
+  	@font-face {font-family: "Droid Serif";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/ePS3nDDdtEGk9UXdlz3xaw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/ePS3nDDdtEGk9UXdlz3xaw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ePS3nDDdtEGk9UXdlz3xaw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ePS3nDDdtEGk9UXdlz3xaw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ePS3nDDdtEGk9UXdlz3xaw.svg') format('svg');}
+  	@font-face {font-family: "Gravitas One";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/Ia_3RDEl902d_biCJt5AFA.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/Ia_3RDEl902d_biCJt5AFA.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/Ia_3RDEl902d_biCJt5AFA.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/Ia_3RDEl902d_biCJt5AFA.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/Ia_3RDEl902d_biCJt5AFA.svg') format('svg');}
+  	@font-face {font-family: "Julius Sans One";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/w7D5mT_LT0-R_obV2nz21A.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/w7D5mT_LT0-R_obV2nz21A.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/w7D5mT_LT0-R_obV2nz21A.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/w7D5mT_LT0-R_obV2nz21A.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/w7D5mT_LT0-R_obV2nz21A.svg') format('svg');}
+  	@font-face {font-family: "Kaushan Script";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/N7N-3fd-v0qOnhTu-9GamA.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/N7N-3fd-v0qOnhTu-9GamA.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/N7N-3fd-v0qOnhTu-9GamA.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/N7N-3fd-v0qOnhTu-9GamA.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/N7N-3fd-v0qOnhTu-9GamA.svg') format('svg');}
+  	@font-face {font-family: "Lato Light";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/JYwDjrpa8U6xfI7FKlWegw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/JYwDjrpa8U6xfI7FKlWegw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/JYwDjrpa8U6xfI7FKlWegw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/JYwDjrpa8U6xfI7FKlWegw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/JYwDjrpa8U6xfI7FKlWegw.svg') format('svg');}
+  	@font-face {font-family: "Lato";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/kMHuzhNgr0KObYFogkU9qg.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/kMHuzhNgr0KObYFogkU9qg.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/kMHuzhNgr0KObYFogkU9qg.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/kMHuzhNgr0KObYFogkU9qg.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/kMHuzhNgr0KObYFogkU9qg.svg') format('svg');}
+  	@font-face {font-family: "Lobster";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/kPGhPwcvbkOCT9x5L5PHhw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/kPGhPwcvbkOCT9x5L5PHhw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/kPGhPwcvbkOCT9x5L5PHhw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/kPGhPwcvbkOCT9x5L5PHhw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/kPGhPwcvbkOCT9x5L5PHhw.svg') format('svg');}
+  	@font-face {font-family: "Neuton Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/qFokD41aVU27THVC-6RMuw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/qFokD41aVU27THVC-6RMuw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/qFokD41aVU27THVC-6RMuw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/qFokD41aVU27THVC-6RMuw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/qFokD41aVU27THVC-6RMuw.svg') format('svg');}
+  	@font-face {font-family: "Neuton Extra Light";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/jk72vychhEmjX17_Z5nbjg.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/jk72vychhEmjX17_Z5nbjg.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/jk72vychhEmjX17_Z5nbjg.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/jk72vychhEmjX17_Z5nbjg.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/jk72vychhEmjX17_Z5nbjg.svg') format('svg');}
+  	@font-face {font-family: "Neuton";src:url('http://wzuk.blob.core.windows.net/assets/fonts/6a8BIp-h8EWtgJAOTPMYAw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/6a8BIp-h8EWtgJAOTPMYAw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/6a8BIp-h8EWtgJAOTPMYAw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/6a8BIp-h8EWtgJAOTPMYAw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/6a8BIp-h8EWtgJAOTPMYAw.svg') format('svg');}
+  	@font-face {font-family: "Nixie One";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/xctC69Fg002n2dGvXpnZIw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/xctC69Fg002n2dGvXpnZIw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/xctC69Fg002n2dGvXpnZIw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/xctC69Fg002n2dGvXpnZIw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/xctC69Fg002n2dGvXpnZIw.svg') format('svg');}
+  	@font-face {font-family: "Oleo Script";src:url('http://wzuk.blob.core.windows.net/assets/fonts/dCfhlsJpIk2_PlZcLee6-w.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/dCfhlsJpIk2_PlZcLee6-w.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/dCfhlsJpIk2_PlZcLee6-w.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/dCfhlsJpIk2_PlZcLee6-w.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/dCfhlsJpIk2_PlZcLee6-w.svg') format('svg');}
+  	@font-face {font-family: "PT Mono";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/mKwJ41VczkuadvZQFB69iQ.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/mKwJ41VczkuadvZQFB69iQ.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/mKwJ41VczkuadvZQFB69iQ.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/mKwJ41VczkuadvZQFB69iQ.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/mKwJ41VczkuadvZQFB69iQ.svg') format('svg');}
+  	@font-face {font-family: "PT Sans";src:url('http://wzuk.blob.core.windows.net/assets/fonts/ujtBJKYCkk-aGRvjqZ2Q6g.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/ujtBJKYCkk-aGRvjqZ2Q6g.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ujtBJKYCkk-aGRvjqZ2Q6g.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ujtBJKYCkk-aGRvjqZ2Q6g.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/ujtBJKYCkk-aGRvjqZ2Q6g.svg') format('svg');}
+  	@font-face {font-family: "PT Sans Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/jyCuK2Q9ckmUVHo_bxIt1w.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/jyCuK2Q9ckmUVHo_bxIt1w.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/jyCuK2Q9ckmUVHo_bxIt1w.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/jyCuK2Q9ckmUVHo_bxIt1w.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/jyCuK2Q9ckmUVHo_bxIt1w.svg') format('svg');}
+  	@font-face {font-family: "PT Sans Narrow Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/R3vKkDHIkEqPkFN_BbFEYA.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/R3vKkDHIkEqPkFN_BbFEYA.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/R3vKkDHIkEqPkFN_BbFEYA.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/R3vKkDHIkEqPkFN_BbFEYA.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/R3vKkDHIkEqPkFN_BbFEYA.svg') format('svg');}
+  	@font-face {font-family: "PT Serif";src:url('http://wzuk.blob.core.windows.net/assets/fonts/k0Q0RpzRHUa3xsKlKajrYw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/k0Q0RpzRHUa3xsKlKajrYw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/k0Q0RpzRHUa3xsKlKajrYw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/k0Q0RpzRHUa3xsKlKajrYw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/k0Q0RpzRHUa3xsKlKajrYw.svg') format('svg');}
+  	@font-face {font-family: "Source Sans Pro Light";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/N-FTQm6wJUid2Llo-YmLXw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/N-FTQm6wJUid2Llo-YmLXw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/N-FTQm6wJUid2Llo-YmLXw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/N-FTQm6wJUid2Llo-YmLXw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/N-FTQm6wJUid2Llo-YmLXw.svg') format('svg');}
+  	@font-face {font-family: "Source Sans Pro Semi Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/Cuwea6LnvkOqcMrkyGOEWA.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/Cuwea6LnvkOqcMrkyGOEWA.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/Cuwea6LnvkOqcMrkyGOEWA.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/Cuwea6LnvkOqcMrkyGOEWA.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/Cuwea6LnvkOqcMrkyGOEWA.svg') format('svg');}
+  	@font-face {font-family: "Vollkorn";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/9_jFFW9MXU2YKrxUFFf7Tw.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/9_jFFW9MXU2YKrxUFFf7Tw.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/9_jFFW9MXU2YKrxUFFf7Tw.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/9_jFFW9MXU2YKrxUFFf7Tw.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/9_jFFW9MXU2YKrxUFFf7Tw.svg') format('svg');}
+  	@font-face {font-family: "Vollkorn Italic";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/_NLTS5Xqx0u8VVDeXpU6xQ.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/_NLTS5Xqx0u8VVDeXpU6xQ.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/_NLTS5Xqx0u8VVDeXpU6xQ.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/_NLTS5Xqx0u8VVDeXpU6xQ.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/_NLTS5Xqx0u8VVDeXpU6xQ.svg') format('svg');}
+  	@font-face {font-family: "Vollkorn Bold";
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/KvLEhsX3PEeA-FNngJB2qQ.eot');
+  	src:url('http://wzuk.blob.core.windows.net/assets/fonts/KvLEhsX3PEeA-FNngJB2qQ.eot') format('embedded-opentype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/KvLEhsX3PEeA-FNngJB2qQ.woff') format('woff'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/KvLEhsX3PEeA-FNngJB2qQ.ttf') format('truetype'),
+  	url('http://wzuk.blob.core.windows.net/assets/fonts/KvLEhsX3PEeA-FNngJB2qQ.svg') format('svg');}
+  	@font-face {font-family: "ChunkFive";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/XYicwBhiC0GIcAVnvnus0g.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/XYicwBhiC0GIcAVnvnus0g.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/XYicwBhiC0GIcAVnvnus0g.ttf') format('truetype');}
+  	@font-face {font-family: "Trade Winds";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/eO4YArKPikqhBAevD7WV9g.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/eO4YArKPikqhBAevD7WV9g.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/eO4YArKPikqhBAevD7WV9g.ttf') format('truetype');}
+  	@font-face {font-family: "Monofett";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/s-68fbZtQEO1EQfWmJluuw.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/s-68fbZtQEO1EQfWmJluuw.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/s-68fbZtQEO1EQfWmJluuw.ttf') format('truetype');}
+  	@font-face {font-family: "Daniel";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/yzotxiLn506b0QmJ8JZmbQ.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/yzotxiLn506b0QmJ8JZmbQ.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/yzotxiLn506b0QmJ8JZmbQ.ttf') format('truetype');}
+  	@font-face {font-family: "Sansation";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/Oysu5UHP_U6_rxIxBVWpYw.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/Oysu5UHP_U6_rxIxBVWpYw.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/Oysu5UHP_U6_rxIxBVWpYw.ttf') format('truetype');}
+  	@font-face {font-family: "Journal";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6_8ZOrKeUkOAvRPNgWHb9w.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6_8ZOrKeUkOAvRPNgWHb9w.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/6_8ZOrKeUkOAvRPNgWHb9w.ttf') format('truetype');}
+  	@font-face {font-family: "Smokum";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/ncNqrlgcREivdRU-k-Naew.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/ncNqrlgcREivdRU-k-Naew.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/ncNqrlgcREivdRU-k-Naew.ttf') format('truetype');}
+  	@font-face {font-family: "Astloch";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/QICdiiMFZkyT8RmTC3y6yQ.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/QICdiiMFZkyT8RmTC3y6yQ.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/QICdiiMFZkyT8RmTC3y6yQ.ttf') format('truetype');}
+  	@font-face {font-family: "Flavors";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/2VBzMTKs6UC_JBmVOH12CQ.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/2VBzMTKs6UC_JBmVOH12CQ.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/2VBzMTKs6UC_JBmVOH12CQ.ttf') format('truetype');}
+  	@font-face {font-family: "Ultra";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/qo4rZBi0uE256huciqhtAA.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/qo4rZBi0uE256huciqhtAA.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/qo4rZBi0uE256huciqhtAA.ttf') format('truetype');}
+  	@font-face {font-family: "Oxygen";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6REyLGorxkm2Oh5AtJ-ijw.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6REyLGorxkm2Oh5AtJ-ijw.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/6REyLGorxkm2Oh5AtJ-ijw.ttf') format('truetype');}
+  	@font-face {font-family: "Loved by the King";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/IX51MT2iK0uvZi3kFOzkhQ.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/IX51MT2iK0uvZi3kFOzkhQ.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/IX51MT2iK0uvZi3kFOzkhQ.ttf') format('truetype');}
+  	@font-face {font-family: "Ubuntu";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/FivseEZ3cU21SS4CvN27WA.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/FivseEZ3cU21SS4CvN27WA.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/FivseEZ3cU21SS4CvN27WA.ttf') format('truetype');}
+  	@font-face {font-family: "alegreya";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/c392OvmIW0q52TFLaVP_Kw.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/c392OvmIW0q52TFLaVP_Kw.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/c392OvmIW0q52TFLaVP_Kw.ttf') format('truetype');}
+  	@font-face {font-family: "Geostar Fill";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/ljV-Ng1GhUOIlDO8hpANRQ.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/ljV-Ng1GhUOIlDO8hpANRQ.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/ljV-Ng1GhUOIlDO8hpANRQ.ttf') format('truetype');}
+  	@font-face {font-family: "GoodDog";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/yd0SmjlNS0iI-DuhKZIwGg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/yd0SmjlNS0iI-DuhKZIwGg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/yd0SmjlNS0iI-DuhKZIwGg.ttf') format('truetype');}
+  	@font-face {font-family: "WalkWay";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/rFEZSHx2GkGUrUIXjQW9ng.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/rFEZSHx2GkGUrUIXjQW9ng.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/rFEZSHx2GkGUrUIXjQW9ng.ttf') format('truetype');}
+  	@font-face {font-family: "IM Fell English SC";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/amQPeYmfrEqXk1MNJBuVXQ.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/amQPeYmfrEqXk1MNJBuVXQ.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/amQPeYmfrEqXk1MNJBuVXQ.ttf') format('truetype');}
+  	@font-face {font-family: "Metamorphous";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/QqIaqmVFPUmNyFNnLzDpZw.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/QqIaqmVFPUmNyFNnLzDpZw.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/QqIaqmVFPUmNyFNnLzDpZw.ttf') format('truetype');}
+  	@font-face {font-family: "Droid Sans";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/5QNbJt6sc0ebXVWkYgBnMA.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/5QNbJt6sc0ebXVWkYgBnMA.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/5QNbJt6sc0ebXVWkYgBnMA.ttf') format('truetype');}
+  	@font-face {font-family: "Fredericka the Great";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/Vf1iz2qVikG7wVd8C9st3A.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/Vf1iz2qVikG7wVd8C9st3A.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/Vf1iz2qVikG7wVd8C9st3A.ttf') format('truetype');}
+  	@font-face {font-family: "Eater";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/55Su_OwvoE6OKVhKKzSY6Q.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/55Su_OwvoE6OKVhKKzSY6Q.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/55Su_OwvoE6OKVhKKzSY6Q.ttf') format('truetype');}
+  	@font-face {font-family: "Vast Shadow";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/USd_yHMCykiwUFvUcSchZg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/USd_yHMCykiwUFvUcSchZg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/USd_yHMCykiwUFvUcSchZg.ttf') format('truetype');}
+  	@font-face {font-family: "Shadows Into Light";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/B8n-oYId_U6OpXKqJGJpKg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/B8n-oYId_U6OpXKqJGJpKg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/B8n-oYId_U6OpXKqJGJpKg.ttf') format('truetype');}
+  	@font-face {font-family: "Sail";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/myOhvNnPdEaj83e_6GXNng.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/myOhvNnPdEaj83e_6GXNng.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/myOhvNnPdEaj83e_6GXNng.ttf') format('truetype');}
+  	@font-face {font-family: "Monoton";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/-uvEwG43bUW1L3vDpVJFEQ.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/-uvEwG43bUW1L3vDpVJFEQ.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/-uvEwG43bUW1L3vDpVJFEQ.ttf') format('truetype');}
+  	@font-face {font-family: "Windsong";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/zKxwTevDME6DH4fCrru6kg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/zKxwTevDME6DH4fCrru6kg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/zKxwTevDME6DH4fCrru6kg.ttf') format('truetype');}
+  	@font-face {font-family: "Frijole";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6pWUZHDB8EynwYmYAfOyOg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6pWUZHDB8EynwYmYAfOyOg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/6pWUZHDB8EynwYmYAfOyOg.ttf') format('truetype');}
+  	@font-face {font-family: "Montserrat Alternates";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/bIdHzumRKEi83YyWnHnu1A.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/bIdHzumRKEi83YyWnHnu1A.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/bIdHzumRKEi83YyWnHnu1A.ttf') format('truetype');}
+  	@font-face {font-family: "Geostar";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/fAfA0_KLq06Eao9CPjQ0DQ.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/fAfA0_KLq06Eao9CPjQ0DQ.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/fAfA0_KLq06Eao9CPjQ0DQ.ttf') format('truetype');}
+  	@font-face {font-family: "Creepster";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/4gWwDLFsmk-0HZFaJyobdg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/4gWwDLFsmk-0HZFaJyobdg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/4gWwDLFsmk-0HZFaJyobdg.ttf') format('truetype');}
+  	@font-face {font-family: "Love Ya Like A Sister";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/VuKtfLk8qkWk2JezBv1NvA.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/VuKtfLk8qkWk2JezBv1NvA.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/VuKtfLk8qkWk2JezBv1NvA.ttf') format('truetype');}
+  	@font-face {font-family: "Raleway";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/eNhxIBn0zUewR5uxMJCarg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/eNhxIBn0zUewR5uxMJCarg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/eNhxIBn0zUewR5uxMJCarg.ttf') format('truetype');}
+  	@font-face {font-family: "Merienda One";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/B4TmiEzc1E6tpLTInIPyBg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/B4TmiEzc1E6tpLTInIPyBg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/B4TmiEzc1E6tpLTInIPyBg.ttf') format('truetype');}
+  	@font-face {font-family: "Titillium Web";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/53HJasYy-EyZYL03RXA46g.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/53HJasYy-EyZYL03RXA46g.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/53HJasYy-EyZYL03RXA46g.ttf') format('truetype');}
+  	@font-face {font-family: "Fascinate";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/0jYfXo4sZ069yb44IYY9Rg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/0jYfXo4sZ069yb44IYY9Rg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/0jYfXo4sZ069yb44IYY9Rg.ttf') format('truetype');}
+  	@font-face {font-family: "Megrim";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/VHcMag5wPkybucfCisEJJA.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/VHcMag5wPkybucfCisEJJA.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/VHcMag5wPkybucfCisEJJA.ttf') format('truetype');}
+  	@font-face {font-family: "Ballpark";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/PMhAsKHX1U-W4sz-owHVOQ.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/PMhAsKHX1U-W4sz-owHVOQ.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/PMhAsKHX1U-W4sz-owHVOQ.ttf') format('truetype');}
+  	@font-face {font-family: "Miltonian";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/xbsoQs8kFkuZYtFugyJGCA.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/xbsoQs8kFkuZYtFugyJGCA.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/xbsoQs8kFkuZYtFugyJGCA.ttf') format('truetype');}
+  	@font-face {font-family: "Average Sans";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/3OC92qzCW0SugtFycQNoMA.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/3OC92qzCW0SugtFycQNoMA.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/3OC92qzCW0SugtFycQNoMA.ttf') format('truetype');}
+  	@font-face {font-family: "Questrial";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/kmf1oUmNtUeyOOF27uVodA.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/kmf1oUmNtUeyOOF27uVodA.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/kmf1oUmNtUeyOOF27uVodA.ttf') format('truetype');}
+  	@font-face {font-family: "Plaster";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/86ao0jOuAk-Yc-MZl568PA.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/86ao0jOuAk-Yc-MZl568PA.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/86ao0jOuAk-Yc-MZl568PA.ttf') format('truetype');}
+  	@font-face {font-family: "Ubuntu Condensed";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/hlxEVRdlhkeiO-eWm9WMxw.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/hlxEVRdlhkeiO-eWm9WMxw.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/hlxEVRdlhkeiO-eWm9WMxw.ttf') format('truetype');}
+  	@font-face {font-family: "Seymour One";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6ISWWOXK2USk6Oyqq70H8w.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6ISWWOXK2USk6Oyqq70H8w.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/6ISWWOXK2USk6Oyqq70H8w.ttf') format('truetype');}
+  	@font-face {font-family: "Butcherman";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/lM6ZA5RMgEKqR_JXkpvxtg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/lM6ZA5RMgEKqR_JXkpvxtg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/lM6ZA5RMgEKqR_JXkpvxtg.ttf') format('truetype');}
+  	@font-face {font-family: "MarketingScript";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6NbRtDANWkudrvRunQIA4A.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/6NbRtDANWkudrvRunQIA4A.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/6NbRtDANWkudrvRunQIA4A.ttf') format('truetype');}
+  	@font-face {font-family: "Caesar Dressing";
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/Og1O_vcuMUOPV_-AppNymg.eot');
+  	src:url('http://s3.amazonaws.com/Webzai_Fonts/Og1O_vcuMUOPV_-AppNymg.eot') format('embedded-opentype'),
+  	url('http://s3.amazonaws.com/Webzai_Fonts/Og1O_vcuMUOPV_-AppNymg.ttf') format('truetype');}
+  	</style>
+  	
+<!--The following code is for adding image and visualization into the webpage. The following code 
+set up the image color, the location, the size, and etc..-->
+<!--Bing Maps for Silverlight - Customized Tooltip for Pushpins-->
+<!--Set the background to transparent-->
+<style type="text/css" id="GINGER_SOFTWARE_style">.GINGER_SOFTWARE_noMark { background : transparent; }  
+	.GINGER_SOFTWARE_wrapper{ position: absolute; overflow: hidden; margin: 0px; padding: 0px; border: 0px solid transparent } 
+	.GINGER_SOFTWARE_contour { position : absolute; margin: 0px; }  
+	.GINGER_SOFTWARE_richText { margin : 0px; padding-bottom: 3px; border-width: 0px; border-color: transparent; display: block; color: transparent; -webkit-text-fill-color: transparent; overflow: hidden; white-space: pre-wrap;}  
+	.GINGER_SOFTWARE_inputWrapper .GINGER_SOFTWARE_richText {position: absolute;}  
+	.GINGER_SOFTWARE_canvas { display:none; background-repeat:no-repeat;}  
+	.GINGER_SOFTWARE_control 
+	.GINGER_SOFTWARE_correct, .GINGER_SOFTWARE_control .GINGER_SOFTWARE_SpellingCorrect, 
+	.GINGER_SOFTWARE_control .GINGER_SOFTWARE_spelling, .GINGER_SOFTWARE_control 
+	.GINGER_SOFTWARE_mark {border-top-left-radius:2px; border-top-right-radius:2px; border-bottom-right-radius:2px; border-bottom-left-radius:2px;} 
+	.GINGER_SOFTWARE_control .GINGER_SOFTWARE_correct, .GINGER_SOFTWARE_control .GINGER_SOFTWARE_SpellingCorrect, 
+	.GINGER_SOFTWARE_control .GINGER_SOFTWARE_spelling, .GINGER_SOFTWARE_control 
+	.GINGER_SOFTWARE_mark {background-image:url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhFQ0Y2OENGMzE5OTExRTI4NjMxOTExNTUyMDhEMDMwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhFQ0Y2OEQwMzE5OTExRTI4NjMxOTExNTUyMDhEMDMwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEVDRjY4Q0QzMTk5MTFFMjg2MzE5MTE1NTIwOEQwMzAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEVDRjY4Q0UzMTk5MTFFMjg2MzE5MTE1NTIwOEQwMzAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5RRxRxAAAAD0lEQVR42mK48+w7QIABAAVbAroowN08AAAAAElFTkSuQmCC)!important;} 
+	.GINGER_SOFTWARE_control .GINGER_SOFTWARE_correct.GINGER_SOFTWARE_synonym, 
+	.GINGER_SOFTWARE_control .GINGER_SOFTWARE_SpellingCorrect.GINGER_SOFTWARE_synonym, .GINGER_SOFTWARE_control .
+	GINGER_SOFTWARE_spelling.GINGER_SOFTWARE_synonym, .GINGER_SOFTWARE_control 
+	.GINGER_SOFTWARE_mark.GINGER_SOFTWARE_synonym {background-image:url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAABJJREFUeNpi+P9gEwAAAP//AwAFcwKS3d7BnwAAAABJRU5ErkJggg==)!important;} 
+	.GINGER_SOFTWARE_control .GINGER_SOFTWARE_correct.GINGER_SOFTWARE_noSuggestion, .GINGER_SOFTWARE_control 
+	.GINGER_SOFTWARE_SpellingCorrect.GINGER_SOFTWARE_noSuggestion, .GINGER_SOFTWARE_control 
+	.GINGER_SOFTWARE_spelling.GINGER_SOFTWARE_noSuggestion, .GINGER_SOFTWARE_control 
+	.GINGER_SOFTWARE_mark.GINGER_SOFTWARE_noSuggestion {background-image:url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhFQ0Y2OENGMzE5OTExRTI4NjMxOTExNTUyMDhEMDMwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhFQ0Y2OEQwMzE5OTExRTI4NjMxOTExNTUyMDhEMDMwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEVDRjY4Q0QzMTk5MTFFMjg2MzE5MTE1NTIwOEQwMzAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEVDRjY4Q0UzMTk5MTFFMjg2MzE5MTE1NTIwOEQwMzAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5RRxRxAAAAD0lEQVR42mK48+w7QIABAAVbAroowN08AAAAAElFTkSuQmCC)!important;} 
+	.GINGER_SOFTWARE_richText .GINGER_SOFTWARE_correct, .GINGER_SOFTWARE_richText .GINGER_SOFTWARE_SpellingCorrect, 
+	.GINGER_SOFTWARE_richText .GINGER_SOFTWARE_spelling, .GINGER_SOFTWARE_richText 
+	.GINGER_SOFTWARE_mark {position:relative; background-image:none!important;} .GINGER_SOFTWARE_richText 
+	.GINGER_SOFTWARE_markHighlightLeft { position : absolute; left:-2px; top:0px; bottom:0px; width:2px;} 
+	.GINGER_SOFTWARE_richText 
+	.GINGER_SOFTWARE_markHighlightRight { position : absolute; right:-2px; top:0px; bottom:0px; width:2px;} 
+	.GINGER_SOFTWARE_richText 
+	.GINGER_SOFTWARE_markHighlightTop { position : absolute; left:0px; right:0px; top:-2px; height:3px;} 
+	.GINGER_SOFTWARE_richText 
+	.GINGER_SOFTWARE_markHighlightBottom { position : absolute; left:0px; right:0px; bottom:-2px; height:3px;}
+	</style>
+	</head>
+
+<body class="user-interaction-normal hover-supported scrolling-mode-normal 
+			preview-mode site-viewer pc pc-client view-mode full-screen-view header-exists footer-exists pc-desktop-mode" 
+			ginger_software_stylesheet="true" ginger_software_doc="true">
+			
+<!-- Cached Version -->
+<!--First setup the style by position, size-->
+<div id="fontdetectHelper" 
+	style="position: absolute; visibility: hidden; top: -200px; left: -100000px; width: 100000px; height: 200px; 	
+	font-size: 100px;">
+
+<!--Set up the font-->	
+<span style="font-family: 'open sans semi bold', fantasy;">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+
+<!--The w3-container class is the most important of the W3.CSS classes. The w3-container class is used for all types of HTML container elements like:
+<div>, <header>, <footer>, <article>, <section>, <blockquote>, <form>, and more.-->
+
+</div><div class="body-element-container"><div class="body-element-wrapper"><div id="body-element" class="view-mode">
+
+<!--The HTML class attribute makes it possible to define equal styles for "equal" <div> elements-->
+<div id="offset-anchor"></div><div class="design-element page-element" id="id1403784258535" data-element-id="1403784258535">
+<div class="element-main-box positioned" data-element-id="1403784258535">
+
+<!--setup the background, the color-->
+<div class="element-background-layer positioned absolute-fill element-border-target design-element-border-target 
+			fixed-attachment-background" data-element-id="1403784258535" style="background-color: rgb(255, 255, 255);"></div>
+
+<!--Setup the background image-->
+<div class="element-background-image state-displayed fixed-attachment-background image-box-new optimize-speed 
+			state-image-loaded" style="opacity: 0.25;">
+			
+<!--Setup the image box size, choose the width and height-->
+<div class="image-box-image-wrapper horizontal-right vertical-top repeat tile-layout use-image-element" 
+	style="width: 429px; height: 1986px;">
+	
+<!--Set up the background image size, choose the width, height and margin-->
+<div class="image-box-background-image" style="width: 429px; height: 1986px; margin-top: 0px; margin-left: 0px; 
+			background-image: url(&quot;http://storage.googleapis.com/wzukusers/user-500000/images/wz3GL6LuIEO-gbM43lePWg.png&quot;);">
+</div><img class="image-box-image-new" src="http://storage.googleapis.com/wzukusers/user-500000/images/wz3GL6LuIEO-gbM43lePWg.png"></div>
+</div><div class="page-element-border-box element-border-target positioned design-element-border-box" data-element-id="1403784258535">
+
+<!--Choose the header-->
+<div class="header-section page-section positioned" data-element-id="1403784258535">
+
+<!--Setup the first section on this page-->
+<div class="design-element element-size-box header-element is-page-child section-element first-section 
+			first-main-section" id="id1406167636375" data-element-id="1406167636375" style="left: 0px; right: 0px; top: 0px;">
+<header class="html-element header-element" data-element-id="1406167636375">
+<div class="element-main-box design-element-main-box header-element" data-element-id="1406167636375">
+
+<!--Setup the header's background-->
+<div class="element-background-layer element-border-target design-element-background-layer header-element" 
+		data-element-id="1406167636375" style="background-color: rgb(30, 14, 4);"></div>
+<div class="element-border-box element-border-target element-padding-box design-element-border-box header-element" 
+		data-element-id="1406167636375" style="padding: 0px; border-color: black; border-style: solid;">
+<div class="element-content-box design-element-content-box header-element" data-element-id="1406167636375">
+
+<!--Setup the content box size-->
+<div class="content-container content-container-type element-size-box element-size-target header-element 
+			section-element-size-box" data-element-id="1406167636375" style="min-height: 111px;">
+<div class="design-element element-size-box has-rich-content user-selectable-element clickable-element 
+			has-rich-content has-text is-section-child webzai-clickable-behaviour" id="id1406228929022" 
+	data-element-id="1406228929022" style="left: 50%; top: 0px; bottom: 0px; margin-left: -480px; z-index: 1;">
+	<a class="design-element-link-part no-decorations internal-link" href="http://homeless-story.com/">
+<div class="element-main-box design-element-main-box has-rich-content user-selectable-element clickable-element 
+			has-rich-content has-text" data-element-id="1406228929022" style="z-index: 1;">
+			
+<!--Setup the content box background-->
+<div class="element-background-layer element-border-target design-element-background-layer has-rich-content 
+			user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406228929022" 
+	style="background-color: rgba(255, 255, 255, 0);"></div>
+<div class="element-border-box element-border-target element-padding-box design-element-border-box has-rich-content 
+			user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406228929022" 
+	style="padding: 0px; border-color: black; border-style: solid;">
+<div class="element-content-box design-element-content-box has-rich-content user-selectable-element clickable-element 
+			has-rich-content has-text" data-element-id="1406228929022">
+<div class="content-container content-container-type element-size-box element-size-target has-rich-content 
+			user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406228929022" 
+	style="width: 268px; min-height: 5px;">
+<div class="rich-text-element-content absolute-fill element-content dir-ltr" style="text-align: left; 
+			color: rgb(252, 198, 68); line-height: 1.2; letter-spacing: 0px; font-size: 43px; 
+			font-family: Lobster; background: none;">
+			
+<!--Choose the header position-->
+<div class="rich-text-positioning-wrapper vertical-alignment-center" style="margin-top: -25.5px;">
+
+<!--input the Header's content. Since our project is about homeless people and we hope this website can provide 
+help to homeless people, we would like to call this webpage Homeless Care-->
+<div class="rich-text-content common-rich-content-style has-content"><div>Homeless Care<br></div></div></div></div>
+</div></div></div></div></a></div>
+
+<!--Setup the element section-->
+<div class="design-element element-size-box menu-element is-section-child" id="id1407972202910" 
+	data-element-id="1407972202910" style="left: 50%; top: 0px; bottom: 0px; margin-left: -212px; z-index: 8;">
+	<nav class="html-element menu-element" data-element-id="1407972202910">
+	
+<!--Setup the element box-->
+<div class="element-main-box design-element-main-box menu-element" data-element-id="1407972202910" style="z-index: 8;">
+
+<!--Setup the element background-->
+<div class="element-background-layer element-border-target design-element-background-layer menu-element" 
+	data-element-id="1407972202910" style="background-color: rgba(255, 255, 255, 0);"></div>
+	
+<!--Setup the element border box-->
+<div class="element-border-box element-border-target element-padding-box design-element-border-box menu-element" 
+	data-element-id="1407972202910" style="padding: 0px; border-color: black; border-style: solid;">
+<div class="element-content-box design-element-content-box menu-element" data-element-id="1407972202910">
+
+<!--Setup the element box size-->
+<div class="content-container content-container-type element-size-box element-size-target menu-element overflow-hidden" 
+data-element-id="1407972202910" style="width: 686px;">
+<div class="absolute-fill element-content">
+<div class="arrangement-content-holder absolute-fill forwardLayerEvents">
+<span class="inline-block relative-arrangement wrap">
+<div class="positioned no-wrap">
+<span class="inline-block instance-container first-item" style="margin-left: 0px; width: 106px; height: 111px;">
+<div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element 
+			skin-menu-button-element catchLayerEvents webzai-clickable-behaviour" id="id1407972202910-1403784258535" 
+	data-element-id="1407972202910-1403784258535" style="left: 0px; right: 0px; z-index: 1;">
+	
+<!--Setup the website domain. Our website domain is homeless-story.com-->
+	<a class="design-element-link-part no-decorations internal-link" href="http://homeless-story.com/">
+	<div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element 
+	clickable-element skin-menu-button-element" data-element-id="1407972202910-1403784258535" style="z-index: 1;">
+	<div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item 
+	user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1403784258535"></div>
+	<div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element 
+		data-list-item user-selectable-element clickable-element skin-menu-button-element" 
+	data-element-id="1407972202910-1403784258535" style="padding: 0px;">
+<div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element 
+clickable-element skin-menu-button-element" data-element-id="1407972202910-1403784258535">
+
+<!--Setup the content section-->
+<div class="content-container content-container-type element-size-box element-size-target skin-element data-list-item 
+user-selectable-element clickable-element skin-menu-button-element overflow-hidden" 
+data-element-id="1407972202910-1403784258535" style="min-height: 111px;">
+<div class="absolute-fill element-content">
+<span class="inline-block instance-container skin-instance-controller">
+<div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box 
+catchLayerEvents webzai-clickable-behaviour" id="id1462140632570" data-element-id="id1462140632570" style="z-index: 1;">
+<div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element 
+skin-hierarchy-box" data-element-id="id1462140632570" style="z-index: 1;">
+
+<!--Setup the background-->
+<div class="element-background-layer element-border-target design-element-background-layer template-item user-selectable-element clickable-element 
+skin-hierarchy-box" data-element-id="id1462140632570" style="border-radius: 0px; background-color: rgb(252, 198, 68);"></div>
+
+<!--Setup the element border box-->
+<div class="element-border-box element-border-target element-padding-box design-element-border-box template-item 
+user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632570" style="padding: 0px; 
+border-radius: 0px; border-color: rgb(110, 79, 2); border-style: solid;">
+<div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element skin-hierarchy-box" 
+data-element-id="id1462140632570">
+<div class="content-container content-container-type element-size-box element-size-target template-item user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" data-element-id="id1462140632570" 
+style="border-radius: 0px; min-height: 5px;">
+
+<!--Setup the element size-->
+<div class="design-element element-size-box user-selectable-element clickable-element has-text label-element block-element" id="id1462140632571" 
+data-element-id="id1462140632571" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;">
+<div class="element-main-box design-element-main-box 
+user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632571" style="z-index: 1;">
+<div class="element-background-layer element-border-target design-element-background-layer user-selectable-element 
+clickable-element has-text label-element" data-element-id="id1462140632571" style="background-color: rgba(255, 255, 255, 0);">
+</div><div class="element-border-box element-border-target element-padding-box design-element-border-box 
+user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632571" 
+style="padding: 0px; border-color: black; border-style: solid;">
+<div class="element-content-box design-element-content-box user-selectable-element clickable-element 
+has-text label-element" data-element-id="id1462140632571">
+<div class="content-container content-container-type 
+element-size-box element-size-target user-selectable-element clickable-element has-text label-element" 
+data-element-id="id1462140632571" style="min-height: 5px;">
+
+<!--Setup the page button-->
+<!--Setup the home page button-->
+<div class="label-element absolute-fill vertically-align-children element-content" style="overflow: hidden;">
+<span class="text-content element-text-container vertically-centered dir-ltr" style="word-wrap: break-word; 
+			color: rgb(30, 14, 4); text-align: center; line-height: 1.2; letter-spacing: 0px; font-size: 16px; 
+			font-family: 'Open Sans';">Home</span></div></div></div></div></div></div></div></div></div></div>
+			</div></span></div></div></div></div></div></a></div></span>
+			
+<!--Setup the size-->
+<span class="inline-block instance-container" style="margin-left: 10px; width: 106px; height: 111px;">
+
+<!--Setup the "behind the statistic" button, click this button, go to the background page-->
+<div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element 
+			skin-menu-button-element catchLayerEvents webzai-clickable-behaviour" id="id1407972202910-1406139634508" 
+	data-element-id="1407972202910-1406139634508" style="left: 0px; right: 0px; z-index: 2;">
+	<a class="design-element-link-part no-decorations internal-link" href="http://homeless-story.com/background">
+
+<!--Set the interview button, click this button, go to the interview page-->	
+<div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element 
+			clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139634508" style="z-index: 2;">
+			
+<!--Setup the solution page, click this button, go to the solution page-->
+<div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item 
+			user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139634508">
+			
+<!--Setup the contact page, click this button, go to the contact page-->
+</div><div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element 
+				data-list-item user-selectable-element clickable-element skin-menu-button-element" 
+				data-element-id="1407972202910-1406139634508" style="padding: 0px;">
+				
+<!--Setup the about us page, click this button, go to the about us page-->
+<div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element 
+			clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139634508">
+			
+<!--Setup the background page, click this button, go to the background page-->
+<div class="content-container content-container-type element-size-box element-size-target skin-element 
+			data-list-item user-selectable-element clickable-element skin-menu-button-element overflow-hidden" 
+	data-element-id="1407972202910-1406139634508" style="min-height: 111px;">
+	
+	<!--Setup the visualization-->
+<div class="absolute-fill element-content">
+	<span class="inline-block instance-container skin-instance-controller">
+<div class="design-element element-size-box template-item user-selectable-element clickable-element 
+			skin-hierarchy-box catchLayerEvents webzai-clickable-behaviour" id="id1462140632579" 
+	data-element-id="id1462140632579" style="z-index: 1;">
+<div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element 
+skin-hierarchy-box" data-element-id="id1462140632579" style="z-index: 1;">
+
+<!--set up the size-->
+<div class="element-background-layer element-border-target design-element-background-layer 
+			template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632579" 
+	style="border-radius: 5px; background-color: rgba(255, 255, 255, 0);"></div>
+	
+	<!--Setup the border box-->
+<div class="element-border-box element-border-target element-padding-box design-element-border-box template-item 
+			user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632579" 
+	style="padding: 0px; border-radius: 5px; border-color: rgb(110, 79, 2); border-style: solid;">
+<div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element 
+			skin-hierarchy-box" data-element-id="id1462140632579">
+<div class="content-container content-container-type element-size-box element-size-target template-item 
+			user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" 
+	data-element-id="id1462140632579" style="border-radius: 5px; min-height: 5px;">
+<div class="design-element element-size-box user-selectable-element clickable-element has-text label-element block-element" 
+		id="id1462140632580" data-element-id="id1462140632580" 
+	style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;">
+<div class="element-main-box design-element-main-box user-selectable-element clickable-element has-text label-element" 
+	data-element-id="id1462140632580" style="z-index: 1;">
+
+<!--Setup the background-->
+<div class="element-background-layer element-border-target design-element-background-layer user-selectable-element 
+			clickable-element has-text label-element" data-element-id="id1462140632580" 
+	style="background-color: rgba(255, 255, 255, 0);"></div>
+	
+<!--Setup the element border-->
+<div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element 
+			clickable-element has-text label-element" data-element-id="id1462140632580" style="padding: 0px; 
+			border-color: black; border-style: solid;">
+
+<!--Setup the element content box-->
+<div class="element-content-box design-element-content-box user-selectable-element clickable-element has-text label-element" 
+	data-element-id="id1462140632580">
+<div class="content-container content-container-type element-size-box element-size-target user-selectable-element 
+			clickable-element has-text label-element" data-element-id="id1462140632580" style="min-height: 5px;">
+<div class="label-element absolute-fill vertically-align-children element-content" style="overflow: hidden;">
+
+<!--Setup the background page-->
+<span class="text-content element-text-container vertically-centered dir-ltr" style="word-wrap: break-word; 
+			color: rgb(255, 255, 255); text-align: center; line-height: 1.2; letter-spacing: 0px; font-size: 16px; 
+			font-family: 'Open Sans';">Background</span></div></div></div></div></div></div></div></div></div></div></div>
+</span></div></div></div></div></div></a></div></span>
+
+<!--Setup the font size-->
+<span class="inline-block instance-container" style="margin-left: 10px; width: 106px; height: 111px;">
+<div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element 
+			skin-menu-button-element catchLayerEvents webzai-clickable-behaviour" id="id1407972202910-id1461425821211" 
+	data-element-id="1407972202910-id1461425821211" style="left: 0px; right: 0px; z-index: 3;">
+	
+	<!--Setup the link to interview-->
+	<a class="design-element-link-part no-decorations internal-link" href="http://homeless-story.com/interview">
+<div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element clickable-element 
+			skin-menu-button-element" data-element-id="1407972202910-id1461425821211" style="z-index: 3;">
+<div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item 
+			user-selectable-element clickable-element skin-menu-button-element" 
+	data-element-id="1407972202910-id1461425821211"></div>
+<div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element 
+			data-list-item user-selectable-element clickable-element skin-menu-button-element" 
+	data-element-id="1407972202910-id1461425821211" style="padding: 0px;">
+	
+	<!--Setup the element content box-->
+<div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element 
+			clickable-element skin-menu-button-element" data-element-id="1407972202910-id1461425821211">
+			
+	<!--Setup the element size box-->
+<div class="content-container content-container-type element-size-box element-size-target skin-element 
+			data-list-item user-selectable-element clickable-element skin-menu-button-element overflow-hidden" 
+	data-element-id="1407972202910-id1461425821211" style="min-height: 111px;">
+<div class="absolute-fill element-content">
+<span class="inline-block instance-container skin-instance-controller">
+<div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box 
+			catchLayerEvents webzai-clickable-behaviour" id="id1462140632588" data-element-id="id1462140632588" 
+	 style="z-index: 1;">
+<div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element 
+			skin-hierarchy-box" data-element-id="id1462140632588" style="z-index: 1;">
+			
+	<!--Setup the background-->
+<div class="element-background-layer element-border-target design-element-background-layer 
+			template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632588" 
+	style="border-radius: 5px; background-color: rgba(255, 255, 255, 0);"></div>
+	
+	<!--Setup the element border box-->
+<div class="element-border-box element-border-target element-padding-box design-element-border-box template-item 
+			user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632588" 
+	style="padding: 0px; border-radius: 5px; border-color: rgb(110, 79, 2); border-style: solid;">
+<div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element 
+			skin-hierarchy-box" data-element-id="id1462140632588">
+			
+	<!--Setup the content size box-->
+<div class="content-container content-container-type element-size-box element-size-target template-item 
+			user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" data-element-id="id1462140632588" 
+	style="border-radius: 5px; min-height: 5px;">
+<div class="design-element element-size-box user-selectable-element clickable-element has-text label-element block-element" id="id1462140632589" 
+data-element-id="id1462140632589" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;"><div class="element-main-box design-element-main-box 
+user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632589" style="z-index: 1;"><div class="element-background-layer 
+element-border-target design-element-background-layer user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632589" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632589" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632589"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632589" style="min-height: 5px;"><div class="label-element absolute-fill vertically-align-children element-content" style="overflow: hidden;"><span class="text-content element-text-container vertically-centered dir-ltr" style="word-wrap: break-word; color: rgb(255, 255, 255); text-align: center; line-height: 1.2; letter-spacing: 0px; font-size: 16px; font-family: 'Open Sans';">Interview</span></div></div></div></div></div></div></div></div></div></div></div></span></div></div></div></div></div></a></div></span><span class="inline-block instance-container" style="margin-left: 10px; width: 106px; height: 111px;"><div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element catchLayerEvents webzai-clickable-behaviour" id="id1407972202910-id1461463543345" data-element-id="1407972202910-id1461463543345" style="left: 0px; right: 0px; z-index: 4;"><a class="design-element-link-part no-decorations internal-link" href="http://homeless-story.com/solution"><div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-id1461463543345" style="z-index: 4;"><div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-id1461463543345"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-id1461463543345" style="padding: 0px;"><div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-id1461463543345"><div class="content-container content-container-type element-size-box element-size-target skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element overflow-hidden" data-element-id="1407972202910-id1461463543345" style="min-height: 111px;"><div class="absolute-fill element-content"><span class="inline-block instance-container skin-instance-controller"><div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box catchLayerEvents webzai-clickable-behaviour" id="id1462140632598" data-element-id="id1462140632598" style="z-index: 1;"><div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632598" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632598" style="border-radius: 5px; background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632598" style="padding: 0px; border-radius: 5px; border-color: rgb(110, 79, 2); border-style: solid;"><div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632598"><div class="content-container content-container-type element-size-box element-size-target template-item user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" data-element-id="id1462140632598" style="border-radius: 5px; min-height: 5px;"><div class="design-element element-size-box user-selectable-element clickable-element has-text label-element block-element" id="id1462140632599" data-element-id="id1462140632599" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632599" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632599" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632599" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632599"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632599" style="min-height: 5px;"><div class="label-element absolute-fill vertically-align-children element-content" style="overflow: hidden;"><span class="text-content element-text-container vertically-centered dir-ltr" style="word-wrap: break-word; color: rgb(255, 255, 255); text-align: center; line-height: 1.2; letter-spacing: 0px; font-size: 16px; font-family: 'Open Sans';">Solution</span></div></div></div></div></div></div></div></div></div></div></div></span></div></div></div></div></div></a></div></span><span class="inline-block instance-container" style="margin-left: 10px; width: 106px; height: 111px;"><div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element catchLayerEvents webzai-clickable-behaviour" id="id1407972202910-1406139701301" data-element-id="1407972202910-1406139701301" style="left: 0px; right: 0px; z-index: 5;"><a class="design-element-link-part no-decorations internal-link" href="http://homeless-story.com/contact"><div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139701301" style="z-index: 5;"><div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139701301"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139701301" style="padding: 0px;"><div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139701301"><div class="content-container content-container-type element-size-box element-size-target skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element overflow-hidden" data-element-id="1407972202910-1406139701301" style="min-height: 111px;"><div class="absolute-fill element-content"><span class="inline-block instance-container skin-instance-controller"><div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box catchLayerEvents webzai-clickable-behaviour" id="id1462140632612" data-element-id="id1462140632612" style="z-index: 1;"><div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632612" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632612" style="border-radius: 5px; background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632612" style="padding: 0px; border-radius: 5px; border-color: rgb(110, 79, 2); border-style: solid;"><div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632612"><div class="content-container content-container-type element-size-box element-size-target template-item user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" data-element-id="id1462140632612" style="border-radius: 5px; min-height: 5px;"><div class="design-element element-size-box user-selectable-element clickable-element has-text label-element block-element" id="id1462140632613" data-element-id="id1462140632613" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632613" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632613" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632613" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632613"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632613" style="min-height: 5px;"><div class="label-element absolute-fill vertically-align-children element-content" style="overflow: hidden;"><span class="text-content element-text-container vertically-centered dir-ltr" style="word-wrap: break-word; color: rgb(255, 255, 255); text-align: center; line-height: 1.2; letter-spacing: 0px; font-size: 16px; font-family: 'Open Sans';">Contact</span></div></div></div></div></div></div></div></div></div></div></div></span></div></div></div></div></div></a></div></span><span class="inline-block instance-container last-item" style="margin-left: 10px; width: 106px; height: 111px;"><div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element catchLayerEvents webzai-clickable-behaviour" id="id1407972202910-1406139621481" data-element-id="1407972202910-1406139621481" style="left: 0px; right: 0px; z-index: 6;"><a class="design-element-link-part no-decorations internal-link" href="http://homeless-story.com/about-us"><div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139621481" style="z-index: 6;"><div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139621481"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139621481" style="padding: 0px;"><div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element" data-element-id="1407972202910-1406139621481"><div class="content-container content-container-type element-size-box element-size-target skin-element data-list-item user-selectable-element clickable-element skin-menu-button-element overflow-hidden" data-element-id="1407972202910-1406139621481" style="min-height: 111px;"><div class="absolute-fill element-content"><span class="inline-block instance-container skin-instance-controller"><div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box catchLayerEvents webzai-clickable-behaviour" id="id1462140632627" data-element-id="id1462140632627" style="z-index: 1;"><div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632627" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632627" style="border-radius: 5px; background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632627" style="padding: 0px; border-radius: 5px; border-color: rgb(110, 79, 2); border-style: solid;"><div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632627"><div class="content-container content-container-type element-size-box element-size-target template-item user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" data-element-id="id1462140632627" style="border-radius: 5px; min-height: 5px;"><div class="design-element element-size-box user-selectable-element clickable-element has-text label-element block-element" id="id1462140632628" data-element-id="id1462140632628" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632628" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632628" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632628" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632628"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element has-text label-element" data-element-id="id1462140632628" style="min-height: 5px;"><div class="label-element absolute-fill vertically-align-children element-content" style="overflow: hidden;"><span class="text-content element-text-container vertically-centered dir-ltr" style="word-wrap: break-word; color: rgb(255, 255, 255); text-align: center; line-height: 1.2; letter-spacing: 0px; font-size: 16px; font-family: 'Open Sans';">About Us</span></div></div></div></div></div></div></div></div></div></div></div></span></div></div></div></div></div></a></div></span></div></span></div><div class="relative-child-elements-content-holder positioned forwardLayerEvents"></div></div></div></div></div></div></nav></div></div></div></div></div></header></div></div><div class="element-content-box element-padding-box positioned" data-element-id="1403784258535"><div class="page-element-size-box element-size-box positioned element-size-target" data-element-id="1403784258535" style="min-height: 0px;"><div class="master-page-mobile-content-container" data-element-id="1403784258535"></div><div class="page-content-container content-container-type" data-element-id="1403784258535"><div class="page-element element-content"><div class="design-element positioned page-content-element is-page-child block-element" id="id1402310978797" data-element-id="1402310978797" style="margin: 0px;"><div class="element-main-box positioned page-content-element" data-element-id="1402310978797"><div class="element-background-layer element-border-target design-element-border-target page-content-element" data-element-id="1402310978797" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target positioned design-element-border-box page-content-element" data-element-id="1402310978797" style="border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box element-padding-box positioned page-content-element" data-element-id="1402310978797" style="padding: 0px;"><div class="page-content-element-size-box element-size-box positioned element-size-target page-content-element" data-element-id="1402310978797" style="min-height: 0px;"><div class="page-content-content-container content-container-type positioned page-content-element" data-element-id="1402310978797"><div class="base-page-content-element"> <div class="main-sections-container border-box-sizing"><div class="sections-wrapper"><div class="positioned"><div class="design-element element-size-box page-section-element is-page-child section-element hidden-design-element" id="idmasterPageContentSectionId" data-element-id="masterPageContentSectionId"><section class="html-element page-section-element" data-element-id="masterPageContentSectionId"><div class="element-main-box design-element-main-box page-section-element state-hidden" data-element-id="masterPageContentSectionId"><div class="element-background-layer element-border-target design-element-background-layer page-section-element" data-element-id="masterPageContentSectionId" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box page-section-element" data-element-id="masterPageContentSectionId" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box page-section-element" data-element-id="masterPageContentSectionId"><div class="content-container content-container-type element-size-box element-size-target page-section-element section-element-size-box" data-element-id="masterPageContentSectionId"></div></div></div></div></section></div><div class="design-element element-size-box page-section-element is-page-child section-element" id="id1406080521083" data-element-id="1406080521083"><section class="html-element page-section-element" data-element-id="1406080521083"><div class="element-main-box design-element-main-box page-section-element" data-element-id="1406080521083"><div class="element-background-layer element-border-target design-element-background-layer page-section-element" data-element-id="1406080521083" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-background-image design-element-background-image state-displayed image-box-new optimize-speed state-image-loaded"><div class="image-box-image-wrapper horizontal-center vertical-center stretchedToFill non-tile-layout use-image-element" style="width: 429px; height: 725px;"><div class="image-box-background-image" style="background-image: url(&quot;http://storage.googleapis.com/wzukusers/user-19768954/images/571bdfd55b7a43yZDNWg/background1_d1450.jpg&quot;);"></div><img class="image-box-image-new" src="http://storage.googleapis.com/wzukusers/user-19768954/images/571bdfd55b7a43yZDNWg/background1_d1450.jpg" width="1450" height="725" style="width: 1450px; height: 725px; margin-top: 0px; margin-left: -510px;"></div></div><span class="element-overlay-layer element-border-target" style="border-width: 0px; background-color: rgba(0, 0, 0, 0.498039);"></span><div class="element-border-box element-border-target element-padding-box design-element-border-box page-section-element" data-element-id="1406080521083" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box page-section-element" data-element-id="1406080521083"><div class="content-container content-container-type element-size-box element-size-target page-section-element section-element-size-box" data-element-id="1406080521083" style="min-height: 725px;"><div class="design-element element-size-box has-rich-content user-selectable-element clickable-element has-rich-content has-text is-section-child" id="id1406164356251" data-element-id="1406164356251" style="left: 50%; top: 108px; margin-left: -405px; z-index: 2;"><div class="element-main-box design-element-main-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406164356251" style="z-index: 2;"><div class="element-background-layer element-border-target design-element-background-layer has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406164356251" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406164356251" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406164356251"><div class="content-container content-container-type element-size-box element-size-target has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406164356251" style="width: 811px; min-height: 157px;"><div class="rich-text-element-content absolute-fill element-content dir-ltr" style="text-align: center; color: rgb(255, 255, 255); text-shadow: rgb(117, 55, 16) 2px 2px 2px; line-height: 1.2; letter-spacing: 0px; font-size: 36px; font-family: 'Open Sans Semi Bold'; background: none;"><div class="rich-text-positioning-wrapper vertical-alignment-center" style="margin-top: -35px;"><div class="rich-text-content common-rich-content-style has-content"><div><span style="font-size:23px;">Reported Number of the</span> Homeless Spotted in NYC <span style="font-size:23px;">by Today in Year 2016:</span></div></div></div></div></div></div></div></div></div><div class="design-element element-size-box has-rich-content user-selectable-element clickable-element has-rich-content has-text is-section-child" id="id1461444673075" data-element-id="id1461444673075" style="left: 50%; top: 276px; margin-left: -144px; z-index: 11;"><h1 class="html-element has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461444673075"><div style="position:relative; display:block; margin-left:0px; margin-top:0px; margin-right:0px; margin-bottom:0px; float:none; z-index:11;" class="full-height"><div class="block positioned full-height" style="opacity: 1; transform: none;"><div class="element-main-box design-element-main-box has-rich-content user-selectable-element clickable-element has-rich-content has-text has-effect-wrapper" data-element-id="id1461444673075" style="z-index: 11; position: relative; left: 0px; top: 0px; margin: 0px;"><div class="element-background-layer element-border-target design-element-background-layer has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461444673075" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461444673075" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461444673075"><div class="content-container content-container-type element-size-box element-size-target has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461444673075" style="width: 411px; min-height: 172px;"><div class="rich-text-element-content absolute-fill element-content dir-ltr" style="text-align: left; color: rgb(30, 14, 4); line-height: 1.2; letter-spacing: 0px; font-size: 36px; font-family: 'Open Sans'; background: none;"><div class="rich-text-positioning-wrapper vertical-alignment-top"><div class="rich-text-content common-rich-content-style has-content"><div><span style="font-family:old standard tt italic;"><span style="font-size:114px;"></span></span><span class="theme-text-font-heading2"><span style="font-size:114px;"><span class="theme-text-color-3-0"><strong></strong>9,094&#8203;</span></span></span><span style="font-family:old standard tt italic;"><span style="font-size:114px;"><span style="letter-spacing:1px;"><span style="letter-spacing:2px;"><span style="letter-spacing:3px;"><span style="letter-spacing:4px;"></span></span></span></span></span></span><br></div></div></div></div></div></div></div></div></div></div></h1></div><div class="design-element element-size-box user-selectable-element clickable-element has-rich-content skin-element skin-button-element is-section-child webzai-clickable-behaviour" id="id1461447732636" data-element-id="id1461447732636" style="left: 50%; top: 496px; margin-left: -106px; z-index: 13;"><a class="design-element-link-part no-decorations internal-link" href="http://homeless-story.com/background"><div class="element-main-box design-element-main-box user-selectable-element clickable-element has-rich-content skin-element skin-button-element" data-element-id="id1461447732636" style="z-index: 13;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element has-rich-content skin-element skin-button-element" data-element-id="id1461447732636"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element has-rich-content skin-element skin-button-element" data-element-id="id1461447732636"><div class="element-content-box design-element-content-box user-selectable-element clickable-element has-rich-content skin-element skin-button-element" data-element-id="id1461447732636"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element has-rich-content skin-element skin-button-element" data-element-id="id1461447732636" style="width: 224px; min-height: 40px;"><div class="absolute-fill element-content"><span class="inline-block instance-container skin-instance-controller"><div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box catchLayerEvents" id="id1462140632401" data-element-id="id1462140632401" style="z-index: 1;"><div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632401" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632401" style="background-color: rgb(153, 153, 153);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632401" style="padding: 0px; border-color: rgb(153, 153, 153); border-style: solid;"><div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632401"><div class="content-container content-container-type element-size-box element-size-target template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632401" style="min-height: 5px;"><div class="design-element element-size-box has-rich-content user-selectable-element clickable-element has-rich-content has-text block-element" id="id1462140632402" data-element-id="id1462140632402" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;"><h3 class="html-element has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1462140632402"><div class="element-main-box design-element-main-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1462140632402" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1462140632402" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1462140632402" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1462140632402"><div class="content-container content-container-type element-size-box element-size-target has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1462140632402" style="min-height: 5px;"><div class="rich-text-element-content absolute-fill element-content dir-ltr" style="color: rgb(255, 255, 255); text-align: center; line-height: 1.2; letter-spacing: 0px; font-size: 20px; font-family: 'Open Sans'; background: none;"><div class="rich-text-positioning-wrapper vertical-alignment-center" style="margin-top: -12px;"><div class="rich-text-content common-rich-content-style has-content"><div>Behind the Statistics...<strong></strong></div></div></div></div></div></div></div></div></h3></div></div></div></div></div></div></span></div></div></div></div></div></a></div></div></div></div></div></section></div><div class="design-element element-size-box page-section-element is-page-child section-element" id="id1461445250896" data-element-id="id1461445250896"><section class="html-element page-section-element" data-element-id="id1461445250896"><div class="element-main-box design-element-main-box page-section-element" data-element-id="id1461445250896"><div class="element-background-layer element-border-target design-element-background-layer page-section-element" data-element-id="id1461445250896" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box page-section-element" data-element-id="id1461445250896" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box page-section-element" data-element-id="id1461445250896"><div class="content-container content-container-type element-size-box element-size-target page-section-element section-element-size-box" data-element-id="id1461445250896" style="min-height: 809px;"><div class="design-element element-size-box is-section-child" id="id1461446122004" data-element-id="id1461446122004" style="left: 50%; top: 0px; margin-left: -512px; z-index: 12;"><div class="element-main-box design-element-main-box" data-element-id="id1461446122004" style="z-index: 12;"><div class="element-background-layer element-border-target design-element-background-layer" data-element-id="id1461446122004" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box" data-element-id="id1461446122004" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box" data-element-id="id1461446122004"><div class="content-container content-container-type element-size-box element-size-target" data-element-id="id1461446122004" style="width: 992px; min-height: 809px;"><div class="iframe-content-wrapper iframe-content-block scrolling-no element-content"> <!-- <iframe class="iframe-content-element iframe-content-block" allowtransparency="true" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%" src="//preview.sitebuilder.com/extern/embed-html/embed-html.html?wzId=id1461446122004&amp;wzInstanceId=id1461446122004&amp;wzAppId=embed_html_app&amp;wzAppV=1&amp;wzApiType=app&amp;wzDeviceType=desktop&amp;wzMode=view&amp;wzSessionId=1462140632297&amp;wzEncodeParams=eyJ3ekN1cnJlbnRVcmwiOiJodHRwOi8vaG9tZWxlc3Mtc3RvcnkuY29tLyIsInd6U2l6ZSI6eyJ3aWR0aCI6OTkyLCJoZWlnaHQiOjgwOX19" scrolling="no"></iframe> --> </div></div></div></div></div></div></div></div></div></div></section></div><div class="design-element element-size-box page-section-element is-page-child section-element" id="id1406159727671" data-element-id="1406159727671"><section class="html-element page-section-element" data-element-id="1406159727671"><div class="element-main-box design-element-main-box page-section-element" data-element-id="1406159727671"><div class="element-background-layer element-border-target design-element-background-layer page-section-element" data-element-id="1406159727671" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-background-image design-element-background-image state-displayed image-box-new optimize-speed state-image-loaded"><div class="image-box-image-wrapper horizontal-center vertical-center repeat tile-layout use-image-element" style="width: 429px; height: 287px;"><div class="image-box-background-image" style="width: 429px; height: 287px; margin-top: 0px; margin-left: 0px; background-image: url(&quot;http://storage.googleapis.com/wzukusers/user-500000/images/2QId1L8SQ0mbW_18vNfAdg.png&quot;);"></div><img class="image-box-image-new" src="http://storage.googleapis.com/wzukusers/user-500000/images/2QId1L8SQ0mbW_18vNfAdg.png"></div></div><div class="element-border-box element-border-target element-padding-box design-element-border-box page-section-element" data-element-id="1406159727671" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box page-section-element" data-element-id="1406159727671"><div class="content-container content-container-type element-size-box element-size-target page-section-element section-element-size-box" data-element-id="1406159727671" style="min-height: 287px;"><div class="design-element element-size-box user-selectable-element clickable-element is-section-child" id="id1406167365428" data-element-id="1406167365428" style="left: 50%; top: 47px; margin-left: 29px; z-index: 3;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element" data-element-id="1406167365428" style="z-index: 3;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element" data-element-id="1406167365428"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element" data-element-id="1406167365428" style="padding: 0px;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element" data-element-id="1406167365428"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element" data-element-id="1406167365428" style="width: 89px; min-height: 5px;"><div class="line-element-line element-content horizontal" style="border-bottom-width: 1px; top: 50%; margin-top: -0.5px; border-bottom-color: rgb(117, 55, 16); border-bottom-style: solid; left: 0px; margin-left: 0px;"></div></div></div></div></div></div><div class="design-element element-size-box has-rich-content user-selectable-element clickable-element has-rich-content has-text is-section-child" id="id1406167365429" data-element-id="1406167365429" style="left: 50%; top: 26px; margin-left: 121px; z-index: 4;"><div class="element-main-box design-element-main-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406167365429" style="z-index: 4;"><div class="element-background-layer element-border-target design-element-background-layer has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406167365429" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406167365429" style="padding: 0px; border-color: rgb(110, 79, 2); border-style: solid;"><div class="element-content-box design-element-content-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406167365429"><div class="content-container content-container-type element-size-box element-size-target has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406167365429" style="width: 156px; min-height: 50px;"><div class="rich-text-element-content absolute-fill element-content dir-ltr" style="text-align: center; color: rgb(30, 14, 4); line-height: 1.2; letter-spacing: 0px; font-size: 16px; font-family: 'Open Sans'; background: none;"><div class="rich-text-positioning-wrapper vertical-alignment-center" style="margin-top: -9.5px;"><div class="rich-text-content common-rich-content-style has-content"><div>CONNECT WITH US!</div></div></div></div></div></div></div></div></div><div class="design-element element-size-box user-selectable-element clickable-element is-section-child" id="id1406167365430" data-element-id="1406167365430" style="left: 50%; top: 47px; margin-left: 280px; z-index: 5;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element" data-element-id="1406167365430" style="z-index: 5;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element" data-element-id="1406167365430"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element" data-element-id="1406167365430" style="padding: 0px;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element" data-element-id="1406167365430"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element" data-element-id="1406167365430" style="width: 89px; min-height: 5px;"><div class="line-element-line element-content horizontal" style="border-bottom-width: 1px; top: 50%; margin-top: -0.5px; border-bottom-color: rgb(117, 55, 16); border-bottom-style: solid; left: 0px; margin-left: 0px;"></div></div></div></div></div></div><div class="design-element element-size-box user-selectable-element clickable-element is-section-child" id="id1406168053122" data-element-id="1406168053122" style="left: 50%; top: 77px; margin-left: -7px; z-index: 6;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element" data-element-id="1406168053122" style="z-index: 6;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element" data-element-id="1406168053122"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element" data-element-id="1406168053122" style="padding: 0px;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element" data-element-id="1406168053122"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element" data-element-id="1406168053122" style="width: 14px; min-height: 96px;"><div class="line-element-line element-content vertical" style="border-left-width: 1px; left: 50%; margin-left: -0.5px; border-left-color: rgb(30, 14, 4); border-left-style: solid; top: 0px; margin-top: 0px;"></div></div></div></div></div></div><div class="design-element element-size-box social-icons-element is-section-child" id="id1418851848194" data-element-id="id1418851848194" style="left: 50%; top: 90px; margin-left: 29px; z-index: 9;"><nav class="html-element social-icons-element" data-element-id="id1418851848194"><div class="element-main-box design-element-main-box social-icons-element" data-element-id="id1418851848194" style="z-index: 9;"><div class="element-background-layer element-border-target design-element-background-layer social-icons-element" data-element-id="id1418851848194" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box social-icons-element" data-element-id="id1418851848194" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box social-icons-element" data-element-id="id1418851848194"><div class="content-container content-container-type element-size-box element-size-target social-icons-element overflow-hidden" data-element-id="id1418851848194" style="width: 346px; min-height: 60px;"><div class="absolute-fill element-content"><div class="arrangement-content-holder absolute-fill forwardLayerEvents"><span class="inline-block relative-arrangement wrap"><div class="positioned no-wrap"><span class="inline-block instance-container first-item" style="margin-left: 0px; width: 64px; height: 60px;"><div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element catchLayerEvents webzai-clickable-behaviour" id="id1418851848194-facebook" data-element-id="id1418851848194-facebook" style="left: 0px; right: 0px; z-index: 1;"><div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-facebook" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-facebook"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-facebook" style="padding: 0px;"><div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-facebook"><div class="content-container content-container-type element-size-box element-size-target skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element overflow-hidden" data-element-id="id1418851848194-facebook" style="min-height: 60px;"><div class="absolute-fill element-content"><span class="inline-block instance-container skin-instance-controller"><div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box catchLayerEvents webzai-clickable-behaviour" id="id1462140632686" data-element-id="id1462140632686" style="z-index: 1;"><a class="design-element-link-part no-decorations" target="_blank" href="http://www.facebook.com"><div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632686" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632686" style="border-radius: 5px; background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632686" style="padding: 0px; border-radius: 5px; border-color: rgb(110, 79, 2); border-style: solid;"><div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632686"><div class="content-container content-container-type element-size-box element-size-target template-item user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" data-element-id="id1462140632686" style="border-radius: 5px; min-height: 5px;"><div class="design-element element-size-box user-selectable-element clickable-element block-element" id="id1462140632687" data-element-id="id1462140632687" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element" data-element-id="id1462140632687" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element" data-element-id="id1462140632687" style="border-radius: 50px; background-color: rgb(30, 14, 4);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element" data-element-id="id1462140632687" style="padding: 0px; border-radius: 50px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element" data-element-id="id1462140632687"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element" data-element-id="id1462140632687" style="min-height: 5px;"><div class="icon-element-content element-content public-icons" style="transition: none; color: rgb(255, 255, 255); font-size: 15px; margin-top: -7.5px;"></div></div></div></div></div></div></div></div></div></div></a></div></span></div></div></div></div></div></div></span><span class="inline-block instance-container" style="margin-left: 30px; width: 64px; height: 60px;"><div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element catchLayerEvents webzai-clickable-behaviour" id="id1418851848194-googlePlus" data-element-id="id1418851848194-googlePlus" style="left: 0px; right: 0px; z-index: 2;"><div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-googlePlus" style="z-index: 2;"><div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-googlePlus"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-googlePlus" style="padding: 0px;"><div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-googlePlus"><div class="content-container content-container-type element-size-box element-size-target skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element overflow-hidden" data-element-id="id1418851848194-googlePlus" style="min-height: 60px;"><div class="absolute-fill element-content"><span class="inline-block instance-container skin-instance-controller"><div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box catchLayerEvents webzai-clickable-behaviour" id="id1462140632696" data-element-id="id1462140632696" style="z-index: 1;"><a class="design-element-link-part no-decorations" target="_blank" href="http://plus.google.com"><div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632696" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632696" style="border-radius: 5px; background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632696" style="padding: 0px; border-radius: 5px; border-color: rgb(110, 79, 2); border-style: solid;"><div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632696"><div class="content-container content-container-type element-size-box element-size-target template-item user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" data-element-id="id1462140632696" style="border-radius: 5px; min-height: 5px;"><div class="design-element element-size-box user-selectable-element clickable-element block-element" id="id1462140632697" data-element-id="id1462140632697" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element" data-element-id="id1462140632697" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element" data-element-id="id1462140632697" style="border-radius: 50px; background-color: rgb(30, 14, 4);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element" data-element-id="id1462140632697" style="padding: 0px; border-radius: 50px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element" data-element-id="id1462140632697"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element" data-element-id="id1462140632697" style="min-height: 5px;"><div class="icon-element-content element-content public-icons" style="transition: none; color: rgb(255, 255, 255); font-size: 15px; margin-top: -7.5px;"></div></div></div></div></div></div></div></div></div></div></a></div></span></div></div></div></div></div></div></span><span class="inline-block instance-container" style="margin-left: 30px; width: 64px; height: 60px;"><div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element catchLayerEvents webzai-clickable-behaviour" id="id1418851848194-twitter" data-element-id="id1418851848194-twitter" style="left: 0px; right: 0px; z-index: 3;"><div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-twitter" style="z-index: 3;"><div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-twitter"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-twitter" style="padding: 0px;"><div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-twitter"><div class="content-container content-container-type element-size-box element-size-target skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element overflow-hidden" data-element-id="id1418851848194-twitter" style="min-height: 60px;"><div class="absolute-fill element-content"><span class="inline-block instance-container skin-instance-controller"><div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box catchLayerEvents webzai-clickable-behaviour" id="id1462140632708" data-element-id="id1462140632708" style="z-index: 1;"><a class="design-element-link-part no-decorations" target="_blank" href="http://www.twitter.com"><div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632708" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632708" style="border-radius: 5px; background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632708" style="padding: 0px; border-radius: 5px; border-color: rgb(110, 79, 2); border-style: solid;"><div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632708"><div class="content-container content-container-type element-size-box element-size-target template-item user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" data-element-id="id1462140632708" style="border-radius: 5px; min-height: 5px;"><div class="design-element element-size-box user-selectable-element clickable-element block-element" id="id1462140632709" data-element-id="id1462140632709" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element" data-element-id="id1462140632709" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element" data-element-id="id1462140632709" style="border-radius: 50px; background-color: rgb(30, 14, 4);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element" data-element-id="id1462140632709" style="padding: 0px; border-radius: 50px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element" data-element-id="id1462140632709"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element" data-element-id="id1462140632709" style="min-height: 5px;"><div class="icon-element-content element-content public-icons" style="transition: none; color: rgb(255, 255, 255); font-size: 15px; margin-top: -7.5px;"></div></div></div></div></div></div></div></div></div></div></a></div></span></div></div></div></div></div></div></span><span class="inline-block instance-container last-item" style="margin-left: 30px; width: 64px; height: 60px;"><div class="design-element element-size-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element catchLayerEvents webzai-clickable-behaviour" id="id1418851848194-linkedin" data-element-id="id1418851848194-linkedin" style="left: 0px; right: 0px; z-index: 4;"><div class="element-main-box design-element-main-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-linkedin" style="z-index: 4;"><div class="element-background-layer element-border-target design-element-background-layer skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-linkedin"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-linkedin" style="padding: 0px;"><div class="element-content-box design-element-content-box skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element" data-element-id="id1418851848194-linkedin"><div class="content-container content-container-type element-size-box element-size-target skin-element data-list-item user-selectable-element clickable-element skin-social-icon-element overflow-hidden" data-element-id="id1418851848194-linkedin" style="min-height: 60px;"><div class="absolute-fill element-content"><span class="inline-block instance-container skin-instance-controller"><div class="design-element element-size-box template-item user-selectable-element clickable-element skin-hierarchy-box catchLayerEvents webzai-clickable-behaviour" id="id1462140632717" data-element-id="id1462140632717" style="z-index: 1;"><a class="design-element-link-part no-decorations" target="_blank" href="http://www.linkedin.com"><div class="element-main-box design-element-main-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632717" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632717" style="border-radius: 5px; background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632717" style="padding: 0px; border-radius: 5px; border-color: rgb(110, 79, 2); border-style: solid;"><div class="element-content-box design-element-content-box template-item user-selectable-element clickable-element skin-hierarchy-box" data-element-id="id1462140632717"><div class="content-container content-container-type element-size-box element-size-target template-item user-selectable-element clickable-element skin-hierarchy-box overflow-hidden" data-element-id="id1462140632717" style="border-radius: 5px; min-height: 5px;"><div class="design-element element-size-box user-selectable-element clickable-element block-element" id="id1462140632718" data-element-id="id1462140632718" style="left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 1;"><div class="element-main-box design-element-main-box user-selectable-element clickable-element" data-element-id="id1462140632718" style="z-index: 1;"><div class="element-background-layer element-border-target design-element-background-layer user-selectable-element clickable-element" data-element-id="id1462140632718" style="border-radius: 50px; background-color: rgb(30, 14, 4);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box user-selectable-element clickable-element" data-element-id="id1462140632718" style="padding: 0px; border-radius: 50px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box user-selectable-element clickable-element" data-element-id="id1462140632718"><div class="content-container content-container-type element-size-box element-size-target user-selectable-element clickable-element" data-element-id="id1462140632718" style="min-height: 5px;"><div class="icon-element-content element-content public-icons" style="transition: none; color: rgb(255, 255, 255); font-size: 15px; margin-top: -7.5px;"></div></div></div></div></div></div></div></div></div></div></a></div></span></div></div></div></div></div></div></span></div></span></div><div class="relative-child-elements-content-holder positioned forwardLayerEvents"></div></div></div></div></div></div></nav></div><div class="design-element element-size-box has-rich-content user-selectable-element clickable-element has-rich-content has-text is-section-child" id="id1461421190269" data-element-id="id1461421190269" style="left: 116px; top: 50%; margin-top: -67px; z-index: 10;"><div class="element-main-box design-element-main-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461421190269" style="z-index: 10;"><div class="element-background-layer element-border-target design-element-background-layer has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461421190269" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461421190269" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461421190269"><div class="content-container content-container-type element-size-box element-size-target has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="id1461421190269" style="width: 319px; min-height: 136px;"><div class="rich-text-element-content absolute-fill element-content dir-ltr" style="text-align: left; color: rgb(30, 14, 4); line-height: 1.2; letter-spacing: 0px; font-size: 14px; font-family: 'Open Sans'; background: none;"><div class="rich-text-positioning-wrapper vertical-alignment-top"><div class="rich-text-content common-rich-content-style has-content"><div style="text-align: center;"><span style="font-size:17px;"></span><span style="font-size:15px;"><span style="font-size:16px;"><span style="font-size:17px;"><span style="font-size:18px;"><span style="font-size:19px;"><span style="font-size:20px;"><span style="font-size:21px;"><span style="font-size:17px;">COMS&nbsp;E6998<br>STORYTELLING W/ STREAMING DATA</span></span></span></span></span></span></span></span><br></div><div style="text-align: center;"><span style="font-size:17px;"></span><br></div><div style="text-align: center;"><span style="font-size:17px;">116th Street and Broadway, New York, NY 10027<br>© 2016 Columbia University</span></div></div></div></div></div></div></div></div></div></div></div></div></div></section></div></div></div></div> </div></div></div></div></div></div></div></div></div></div></div><div class="footer-section page-section positioned" data-element-id="1403784258535"><div class="design-element element-size-box footer-element is-page-child section-element last-section last-main-section" id="id1406141038834" data-element-id="1406141038834" style="left: 0px; right: 0px; bottom: 0px;"><section class="html-element footer-element" data-element-id="1406141038834"><div class="element-main-box design-element-main-box footer-element" data-element-id="1406141038834"><div class="element-background-layer element-border-target design-element-background-layer footer-element" data-element-id="1406141038834" style="background-color: rgb(30, 14, 4);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box footer-element" data-element-id="1406141038834" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box footer-element" data-element-id="1406141038834"><div class="content-container content-container-type element-size-box element-size-target footer-element section-element-size-box" data-element-id="1406141038834" style="min-height: 54px;"><div class="design-element element-size-box has-rich-content user-selectable-element clickable-element has-rich-content has-text is-section-child" id="id1406141038840" data-element-id="1406141038840" style="left: 50%; top: 50%; margin-left: -110px; margin-top: -14px; z-index: 7;"><div class="element-main-box design-element-main-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406141038840" style="z-index: 7;"><div class="element-background-layer element-border-target design-element-background-layer has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406141038840" style="background-color: rgba(255, 255, 255, 0);"></div><div class="element-border-box element-border-target element-padding-box design-element-border-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406141038840" style="padding: 0px; border-color: black; border-style: solid;"><div class="element-content-box design-element-content-box has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406141038840"><div class="content-container content-container-type element-size-box element-size-target has-rich-content user-selectable-element clickable-element has-rich-content has-text" data-element-id="1406141038840" style="width: 220px; min-height: 28px;"><div class="rich-text-element-content absolute-fill element-content dir-ltr" style="text-align: left; color: rgb(255, 255, 255); line-height: 1.2; letter-spacing: 0px; font-size: 14px; font-family: 'Open Sans'; background: none;"><div class="rich-text-positioning-wrapper vertical-alignment-center" style="margin-top: -8px;"><div class="rich-text-content common-rich-content-style has-content">Copyright © All Rights Reserved</div></div></div></div></div></div></div></div></div></div></div></div></section></div></div></div></div></div></div></div></div>
+
+<!-- <iframe width="0" height="0" frameborder="0" src="about:blank" id="GINGER_SOFTWARE_bubblesIFrame" scrolling="no" 
+		style="border: 0px solid; display: none; position: absolute; z-index: 2147483647; height: 0px; width: 0px; 
+				background-color: transparent;"></iframe> -->
+		
+		<!--Setup the display style-->
+<div id="GingerWidgetInfo" style="display:none;">{"version":"0.1.0.598","isExtension":true,"extensionName":"Chrome"}</div>
+</body>
+</html>
