@@ -28,4 +28,4 @@
 1. Publishing to a resource queue
 	* Text in the format `<channel name>, <name of donator>, <address>`
 2. Subscribing to a resource queue
-	* Text in the formart `subscribe <channel name>`
+	* Text in the formart `subscribe <channel name>, <phone number>`

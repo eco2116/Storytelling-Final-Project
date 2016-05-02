@@ -5,9 +5,57 @@ import usaddress
 import json
 import twilio.twiml
 import string
+import threading
+import Queue
+
+# Find these values at https://twilio.com/user/account
+account_sid = "ACXXXXXXXXXXXXXXXXX"
+auth_token = "YYYYYYYYYYYYYYYYYY"
+client = TwilioRestClient(account_sid, auth_token)
 
 app = Flask(__name__)
 conn = redis.Redis()
+#initialize a queue of subscribers for each channel
+queueDic = {
+    	'food' : Queue.Queue(),
+    	'shelter' : Queue.Queue(),
+    	'clothing' : Queue.Queue()
+    }
+
+#source: https://gist.github.com/jobliz/2596594
+class Subscriber(threading.Thread):
+	def __init__(self, r, channel, phone):
+		threading.Thread.__init__(self)
+		self.redis = r
+		self.pubsub = self.redis.pubsub()
+		self.pubsub.subscribe([channel])
+		self.phone = phone
+
+	def work(self, item):
+		print item
+		try:
+			info = json.loads(item['data'])
+			#fill in the body more when we have users!!!
+			message = client.messages.create(to=self.phone, from_="+12513335913",
+                                     body="Resource Available")
+		except Exception as e:
+			return
+    
+	def run(self):
+		for item in self.pubsub.listen():
+			self.work(item)
+
+class Master(threading.Thread):
+	def __init__(self, queue):
+		threading.Thread.__init__(self)
+		self.queue = queue
+	def run(self):
+		while True:
+	  		#get sub thread from queue
+	  		sub = self.queue.get()
+	  		sub.start()
+	  		self.queue.task_done()
+
 
 @app.route("/", methods=['GET', 'POST'])
 def process_resource():
@@ -18,21 +66,27 @@ def process_resource():
 	print request.form['FromCity']
 	print request.form['FromZip']
 
-	#commented for testing in Boston
-	# if(request.form['FromCity'] != 'New York'):
-	# 	resp.message("Sorry, we only process events within NYC!")
-	# 	return resp
+	if(request.form['FromCity'] != 'New York'):
+		resp.message("Sorry, we only process events within NYC!")
+		return resp
 
-	food_alert_dict = {}
-	food_alert_dict['zip'] = request.form['FromZip']
+	resource_alert_dict = {}
+	resource_alert_dict['zip'] = request.form['FromZip']
 
 	if(request.form['Body']):
 		body_info = parse_message(request.form['Body'])
-		food_alert_dict['establishment'] = body_info['establishment']
-		food_alert_dict['location'] = body_info['location']
+		resource_alert_dict['channel'] = body_info['channel']
+		if body_info['phone']:
+			resource_alert_dict['channel'] = body_info['phone']
+			
+			client = Subscriber(conn, resource_alert_dict['channel'], resource_alert_dict['phone'])
+			queueDic[resource_alert_dict['channel']].put(client)
+		
+		resource_alert_dict['establishment'] = body_info['establishment']
+		resource_alert_dict['location'] = body_info['location']
 
-	print json.dumps(food_alert_dict)
-	conn.publish('food', json.dumps(food_alert_dict))
+	print json.dumps(resource_alert_dict)
+	conn.publish(resource_alert_dict['channel'], json.dumps(resource_alert_dict))
 
 	return str(resp)
 
@@ -42,18 +96,27 @@ def process_resource():
 
 def parse_message(text):
 	"""
-	Parses an alert text in the form <establishment name>, <address of any format>
+	Parses an alert text in the form <channel name>, <establishment name>, <address of any format>
     Parameters:
     	text - the body of the twilio request
     Returns:
-    	dict - dictionary with name of establishment and parsed address dictionary
+    	dict - dictionary 
 
     """
 	components = string.split(text, ',')
-	print components
-	return {'establishment' : components[0], 'location' : usaddress.parse(components[1])}
+	if components[0] == 'subscribe':
+		return {'phone' : components[1]}
+
+	return {'channel' : components[0],'establishment' : components[1], 'location' : usaddress.parse(components[2])}
 
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True)  
+    #initialize and start a master thread for each queue
+    for q in queueDic:
+    	master = Master(q)
+    	master.start()
+
+
+
