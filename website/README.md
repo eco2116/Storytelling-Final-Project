@@ -20,14 +20,18 @@ the comprehensive solutions we provided, because of the following reasons:
 
 <ol>
 <li>Prerequisites</li>
-- Apply for the AWS RDS database credential token 
-- Apply for the Tableau Server credential token 
-- Download the folder and fill in the credential token 
-- High speed Internet access 
-- Browser (Recommend Google Chrome) 
+<ul>
+<li>Apply for the AWS RDS database credential token</li>
+<li>Apply for the Tableau Server credential token</li>
+<li>Download the folder and fill in the credential token</li>
+<li>High speed Internet access</li>
+<li>Browser (Recommend Google Chrome)</li>
+</ul>
 <li>Running the website</li>
-- Download the and unzip the folder, double check all the six html files are in the same path 
-- Double click the files, and the website should start running 
+<ul>
+<li>Download the and unzip the folder, double check all the six html files are in the same path</li>
+<li>Double click the files, and the website should start running</li>
+</ul>
 </ol>
 
 ## User Guidance of the Website
