@@ -1,6 +1,3 @@
-# $ pip install -U textblob
-# $ python -m textblob.download_corpora
-
 # Import required python libraries
 import urllib2 # for calling NYTimes endpoint
 import json # for handling JSON
